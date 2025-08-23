@@ -9,7 +9,10 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio</title>
+        <!-- =====EMAIL JS===== -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <title>Portfolio - Rahul Bandi</title>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -39,9 +42,10 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Rahul Bandi</span><br> Software <br>Techinician</h1>
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Rahul Bandi</span><br> Software <br>Engineer</h1>
+                    <p class="home__description">Passionate about IoT innovations and cutting-edge technology solutions that shape our digital future.</p>
 
-                    <a href="#" class="button">Contact me</a>
+                    <a href="#contact" class="button">Contact me</a>
                 </div>
 
                 <div class="home__social">
@@ -73,10 +77,11 @@
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">Hi, Again<br>I'am Rahul Bandi</h2>
-                        <p class="about__text">I’m excited about exploring the potential of IoT and diving into new tech innovations.
-                            I love experimenting with fresh ideas to create smart, adaptable solutions. 
-                            If you’re curious about how emerging technologies can reshape our digital world, let’s chat—I’d love to share more!</p>           
+                        <h2 class="about__subtitle">Hi Again,<br>I'm Rahul Bandi</h2>
+                        <p class="about__text">I'm passionate about exploring the potential of IoT and diving into innovative tech solutions.
+                            I thrive on experimenting with emerging technologies to create smart, adaptable systems that solve real-world problems. 
+                            My expertise spans across various programming languages and frameworks, always staying curious about how technology 
+                            can reshape our digital landscape. If you're interested in collaboration or discussing tech innovations, I'd love to connect!</p>           
                     </div>                                   
                 </div>
             </section>
@@ -87,12 +92,13 @@
 
                 <div class="skills__container bd-grid">          
                     <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <p class="skills__text">I specialize in modern web development technologies and IoT solutions, with a focus on creating responsive, 
+                        user-friendly applications that leverage cutting-edge technologies to solve complex problems.</p>
                         <div class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML</span>
+                                <span class="skills__name">HTML5</span>
                             </div>
                             <div class="skills__bar skills__html">
 
@@ -137,6 +143,42 @@
                                 <span class="skills__percentage">85%</span>
                             </div>
                         </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-python skills__icon'></i>
+                                <span class="skills__name">PYTHON</span>
+                            </div>
+                            <div class="skills__bar skills__python">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-react skills__icon'></i>
+                                <span class="skills__name">REACT</span>
+                            </div>
+                            <div class="skills__bar skills__react">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-microchip skills__icon'></i>
+                                <span class="skills__name">IoT</span>
+                            </div>
+                            <div class="skills__bar skills__iot">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
                     </div>
                     
                     <div>              
@@ -176,11 +218,29 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="let’s connect!" class="contact__button button">
+                    <div class="contact__info">
+                        <h3 class="contact__title">Let's work together</h3>
+                        <p class="contact__text">Have a project in mind? I'd love to hear about it. Let's connect and discuss how we can bring your ideas to life.</p>
+                        <div class="contact__details">
+                            <div class="contact__detail">
+                                <i class='bx bx-envelope contact__icon'></i>
+                                <span>rahul.bandi@example.com</span>
+                            </div>
+                            <div class="contact__detail">
+                                <i class='bx bx-map contact__icon'></i>
+                                <span>Available for remote work worldwide</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form" id="contact-form">
+                        <input type="text" name="from_name" placeholder="Your Name" class="contact__input" required>
+                        <input type="email" name="from_email" placeholder="Your Email" class="contact__input" required>
+                        <input type="text" name="subject" placeholder="Subject" class="contact__input" required>
+                        <textarea name="message" placeholder="Your Message" cols="0" rows="8" class="contact__input" required></textarea>
+                        <button type="submit" class="contact__button button" id="submit-btn">
+                            <span class="btn-text">Let's Connect!</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
                     </form>
                 </div>
             </section>
@@ -194,9 +254,8 @@
                 <a href="https://www.instagram.com/rahul._.bandi_/" class="footer__icon"><i class='bx bxl-instagram' style='color:#ffffff'  ></i></a>
                 <a href="https://github.com/Bandi-Rahul" class="footer__icon"><i class='bx bxl-github' style='color:#ffffff' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Rahul Bandi</p>
+            <p class="footer__copy">&#169; 2025 Rahul Bandi. All rights reserved.</p>
         </footer>
-
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
