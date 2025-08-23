@@ -305,9 +305,6 @@ img {
 .skills__js {
   width: 65%;
 }
-.skills__ux {
-  width: 85%;
-}
 .skills__python {
   width: 80%;
 }
@@ -354,7 +351,7 @@ img {
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: auto;
+  margin: 0 auto;
   transition: background-color 0.3s ease;
 }
 
