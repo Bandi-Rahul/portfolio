@@ -258,61 +258,129 @@ img {
 
 /* ===== SKILLS =====*/
 .skills__container {
-  row-gap: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.skills__content {
+  width: 100%;
   text-align: center;
 }
+
 .skills__subtitle {
   margin-bottom: var(--mb-2);
+  text-align: center;
 }
 .skills__text {
   margin-bottom: var(--mb-4);
+  text-align: center;
+  width: 100%;
+  max-width: none;
 }
+/* Skills Row Layout */
+.skills__row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: var(--mb-4);
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .skills__data {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   position: relative;
   font-weight: var(--font-semi);
-  padding: 0.5rem 1rem;
-  margin-bottom: var(--mb-4);
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  flex: 1;
+  min-width: 0;
+  max-width: 450px;
+  text-align: left;
 }
+
+.skills__names {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
   color: var(--first-color);
 }
-.skills__names {
-  display: flex;
-  align-items: center;
-}
+
 .skills__bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: var(--first-color);
+  position: relative;
+  width: 100%;
   height: 0.25rem;
+  background-color: #f1f1f1;
   border-radius: 0.5rem;
-  z-index: var(--z-back);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
 }
-.skills__html {
+
+.skills__bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--first-color);
+  border-radius: 0.5rem;
+  transition: width 2s ease-in-out;
+}
+
+.skills__percentage {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--second-color);
+}
+.skills__html::before {
   width: 95%;
 }
-.skills__css {
+.skills__css::before {
   width: 85%;
 }
-.skills__js {
+.skills__js::before {
   width: 65%;
 }
-.skills__python {
+.skills__python::before {
   width: 80%;
 }
-.skills__react {
+.skills__react::before {
   width: 75%;
 }
-.skills__iot {
+.skills__iot::before {
   width: 70%;
+}
+
+.skills__data-left {
+  margin-right: 1rem;
+}
+
+.skills__data-right {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .skills__row {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .skills__data-left,
+  .skills__data-right {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 .skills__img {
   border-radius: 0.5rem;

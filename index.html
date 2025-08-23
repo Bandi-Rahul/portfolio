@@ -8,6 +8,9 @@
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!-- =====FONT AWESOME===== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
         <!-- =====EMAIL JS===== -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -43,7 +46,7 @@
             <section class="home bd-grid" id="home">
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Rahul Bandi</span><br> Software <br>Engineer</h1>
-                    <p class="home__description">Passionate about IoT innovations and cutting-edge technology solutions <br>that shape our digital future.</p>
+                    <p class="home__description">Passionate about IoT innovations and cutting-edge technology <br>solutions that shape our digital future.</p>
 
                     <a href="#contact" class="button">Contact me</a>
                 </div>
@@ -90,81 +93,81 @@
             <section class="skills section" id="skills">
                 <h2 class="section-title">Skills</h2>
 
-                <div class="skills__container bd-grid">          
-                    <div>
+                <div class="skills__container">          
+                    <div class="skills__content">
                         <h2 class="skills__subtitle">Professional Skills</h2>
                         <p class="skills__text">I specialize in modern web development technologies and IoT solutions, with a focus on creating responsive, 
                         user-friendly applications that leverage cutting-edge technologies to solve complex problems.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
+                        
+                        <!-- Skills Row 1: HTML5 & CSS3 -->
+                        <div class="skills__row">
+                            <div class="skills__data skills__data-left">
+                                <div class="skills__names">
+                                    <i class='bx bxl-html5 skills__icon'></i>
+                                    <span class="skills__name">HTML5</span>
+                                </div>
+                                <div class="skills__bar skills__html"></div>
+                                <div>
+                                    <span class="skills__percentage">95%</span>
+                                </div>
                             </div>
-                            <div class="skills__bar skills__html">
+                            <div class="skills__data skills__data-right">
+                                <div class="skills__names">
+                                    <i class='bx bxl-css3 skills__icon'></i>
+                                    <span class="skills__name">CSS3</span>
+                                </div>
+                                <div class="skills__bar skills__css"></div>
+                                <div>
+                                    <span class="skills__percentage">85%</span>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Skills Row 2: JavaScript & Python -->
+                        <div class="skills__row">
+                            <div class="skills__data skills__data-left">
+                                <div class="skills__names">
+                                    <i class='bx bxl-javascript skills__icon'></i>
+                                    <span class="skills__name">JAVASCRIPT</span>
+                                </div>
+                                <div class="skills__bar skills__js"></div>
+                                <div>
+                                    <span class="skills__percentage">65%</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
+                            <div class="skills__data skills__data-right">
+                                <div class="skills__names">
+                                    <i class='fab fa-python skills__icon'></i>
+                                    <span class="skills__name">PYTHON</span>
+                                </div>
+                                <div class="skills__bar skills__python"></div>
+                                <div>
+                                    <span class="skills__percentage">80%</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-python skills__icon'></i>
-                                <span class="skills__name">PYTHON</span>
+
+                        <!-- Skills Row 3: React & IoT -->
+                        <div class="skills__row">
+                            <div class="skills__data skills__data-left">
+                                <div class="skills__names">
+                                    <i class='bx bxl-react skills__icon'></i>
+                                    <span class="skills__name">REACT</span>
+                                </div>
+                                <div class="skills__bar skills__react"></div>
+                                <div>
+                                    <span class="skills__percentage">75%</span>
+                                </div>
                             </div>
-                            <div class="skills__bar skills__python">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-react skills__icon'></i>
-                                <span class="skills__name">REACT</span>
-                            </div>
-                            <div class="skills__bar skills__react">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">75%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bx-microchip skills__icon'></i>
-                                <span class="skills__name">IoT</span>
-                            </div>
-                            <div class="skills__bar skills__iot">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">70%</span>
+                            <div class="skills__data skills__data-right">
+                                <div class="skills__names">
+                                    <i class='bx bx-microchip skills__icon'></i>
+                                    <span class="skills__name">IoT</span>
+                                </div>
+                                <div class="skills__bar skills__iot"></div>
+                                <div>
+                                    <span class="skills__percentage">70%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -212,7 +215,7 @@
                         <div class="contact__details">
                             <div class="contact__detail">
                                 <i class='bx bx-envelope contact__icon'></i>
-                                <span>bandirahul568@gmail.com</span>
+                                <span>rahulbandi568@gmail.com</span>
                             </div>
                             <div class="contact__detail">
                                 <i class='bx bx-map contact__icon'></i>
