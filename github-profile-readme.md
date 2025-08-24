@@ -4,10 +4,19 @@
 I'm a passionate developer with expertise in Python, JavaScript, HTML, and CSS. I love creating innovative solutions and building beautiful, functional web applications.
 
 ## 🛠️ Tech Stack
-- **Languages:** Python, JavaScript, HTML, CSS
-- **Frameworks:** React, Node.js
+- **Languages:** Python, JavaScript, HTML, CSS, SQL
+- **Python Libraries:** NumPy, Pandas, Flask, Django
+- **Frontend:** React, Node.js, Bootstrap
+- **Backend:** Python, Express.js
+- **Database:** MySQL, MongoDB
 - **Tools:** Git, VS Code, GitHub
 - **Design:** Responsive Web Design, UI/UX
+
+## 🐍 Python Skills
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 
 ## 📊 Portfolio Stats
 ![Portfolio Visits](https://hits.sh/bandi-rahul.github.io/portfolio.svg?style=for-the-badge&label=Portfolio%20Visits&color=007acc)
@@ -16,13 +25,13 @@ I'm a passionate developer with expertise in Python, JavaScript, HTML, and CSS. 
 Check out my portfolio: [bandi-rahul.github.io/portfolio](https://bandi-rahul.github.io/portfolio/)
 
 ## 📈 GitHub Stats
-![Rahul's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bandi-Rahul&show_icons=true&theme=radical)
+![Rahul's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bandi-Rahul&show_icons=true&theme=radical&count_private=true&include_all_commits=true&hide_border=true&custom_title=Rahul's%20GitHub%20Stats)
 
 ## 🔥 Streak Stats
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Bandi-Rahul&theme=radical)
+![GitHub Streak](https://streak-stats.demolab.com/?user=Bandi-Rahul&theme=radical&hide_border=true)
 
 ## 💻 Most Used Languages
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Bandi-Rahul&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Bandi-Rahul&layout=compact&theme=radical&count_private=true&hide_border=true&langs_count=8)
 
 ## 🤝 Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rahul-bandi-479272272/)
@@ -30,10 +39,11 @@ Check out my portfolio: [bandi-rahul.github.io/portfolio](https://bandi-rahul.gi
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bandi-Rahul)
 
 ## 🎯 Current Focus
-- Building responsive web applications
-- Learning new technologies and frameworks
-- Contributing to open-source projects
-- Improving problem-solving skills
+- Building responsive web applications with Python backends
+- Developing data analysis projects with Python
+- Learning advanced Python frameworks (Django, FastAPI)
+- Contributing to open-source Python projects
+- Improving problem-solving skills with algorithms and data structures
 
 ---
 ⭐️ From [Bandi-Rahul](https://github.com/Bandi-Rahul)
