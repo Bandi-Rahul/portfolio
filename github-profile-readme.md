@@ -25,16 +25,19 @@ I'm a passionate developer with expertise in Python, JavaScript, HTML, and CSS. 
 Check out my portfolio: [bandi-rahul.github.io/portfolio](https://bandi-rahul.github.io/portfolio/)
 
 ## 📈 GitHub Stats
-![Rahul's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bandi-Rahul&show_icons=true&theme=radical&count_private=true&include_all_commits=true&hide_border=true&custom_title=Rahul's%20GitHub%20Stats)
+![Rahul's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bandi-Rahul&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true&hide_border=true&custom_title=Rahul's%20GitHub%20Stats&cache_seconds=1800)
+
+## 🏆 GitHub Trophies
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Bandi-Rahul&theme=tokyonight&no-frame=true&column=7)
 
 ## 🔥 Streak Stats
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Bandi-Rahul&theme=radical&hide_border=true&include_all_commits=true&count_private=true&cache_seconds=1800)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Bandi-Rahul&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&cache_seconds=1800)
 
 ## 📅 Contribution Graph
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Bandi-Rahul&theme=radical&hide_border=true)
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Bandi-Rahul&theme=tokyo-night&hide_border=true&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae)
 
 ## 💻 Most Used Languages
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Bandi-Rahul&layout=compact&theme=radical&count_private=true&hide_border=true&langs_count=8)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Bandi-Rahul&layout=compact&theme=tokyonight&count_private=true&hide_border=true&langs_count=8&cache_seconds=1800)
 
 ## 🤝 Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rahul-bandi-479272272/)
