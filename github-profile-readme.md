@@ -28,7 +28,7 @@ Check out my portfolio: [bandi-rahul.github.io/portfolio](https://bandi-rahul.gi
 ![Rahul's GitHub stats](https://github-readme-stats.vercel.app/api?username=Bandi-Rahul&show_icons=true&theme=radical&count_private=true&include_all_commits=true&hide_border=true&custom_title=Rahul's%20GitHub%20Stats)
 
 ## 🔥 Streak Stats
-![GitHub Streak](https://streak-stats.demolab.com/?user=Bandi-Rahul&theme=radical&hide_border=true)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Bandi-Rahul&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
 
 ## 💻 Most Used Languages
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Bandi-Rahul&layout=compact&theme=radical&count_private=true&hide_border=true&langs_count=8)
