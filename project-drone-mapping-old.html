@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone-Based Aerial Mapping | Rahul Bandi</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/project-clean.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--===== SCROLL PROGRESS BAR =====-->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+    
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Rahul Bandi</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <!--===== PROJECT HERO =====-->
+        <section class="project-hero">
+            <div class="project-hero__container bd-grid">
+                <a href="index.html#work" class="back-link">
+                    <i class='bx bx-arrow-back'></i> Back to Projects
+                </a>
+                <h1 class="project-hero__title">Drone-Based Aerial Mapping</h1>
+                <p class="project-hero__subtitle">Advanced LiDAR Integration for High-Precision 2D Terrain Mapping</p>
+                <div class="project-hero__tags">
+                    <span class="tag">IoT</span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">LiDAR</span>
+                    <span class="tag">Embedded Systems</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </section>
+
+        <!--===== PROJECT OVERVIEW =====-->
+        <section class="project-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <i class='bx bx-target-lock'></i>
+                        <h3>Objective</h3>
+                        <p>Leverage drones and LiDAR sensors to achieve highly accurate and efficient aerial mapping, surpassing traditional methods in precision and cost-effectiveness.</p>
+                    </div>
+                    <div class="overview-card">
+                        <i class='bx bx-brain'></i>
+                        <h3>Innovation</h3>
+                        <p>Integration of YD Lidar X2 sensor with custom-built drone platform for real-time 2D point cloud generation and terrain analysis.</p>
+                    </div>
+                    <div class="overview-card">
+                        <i class='bx bx-chart'></i>
+                        <h3>Impact</h3>
+                        <p>Enhanced accessibility for mapping difficult terrains, supporting applications in forestry, agriculture, urban planning, and disaster management.</p>
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h3>About the Project</h3>
+                    <p>This project revolutionizes aerial mapping by integrating unmanned aerial vehicles (UAVs) with advanced LiDAR (Light Detection and Ranging) technology. Traditional aerial mapping methods using manned aircraft or satellite imagery are often costly and time-consuming. Our drone-based solution offers a flexible, efficient, and highly accurate alternative.</p>
+                    
+                    <p>The YD Lidar X2 sensor mounted on our custom drone platform uses laser pulses to measure distances to the Earth's surface, producing high-resolution 2D point clouds that represent terrain and objects with exceptional detail. This technology proves invaluable even in challenging environments such as dense forests or rugged terrain where conventional photogrammetry struggles.</p>
+
+                    <p>The system successfully demonstrates capabilities across multiple domains including environmental monitoring, construction site surveys, precision agriculture, and archaeological site documentation - all while maintaining safety by minimizing risks to human operators.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== KEY FEATURES =====-->
+        <section class="project-section features-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class='bx bx-radar'></i>
+                        </div>
+                        <h3>High-Resolution LiDAR Scanning</h3>
+                        <p>360° scanning with 0.36° resolution at 5000Hz frequency, capturing detailed spatial data up to 8 meters range.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class='bx bx-wifi'></i>
+                        </div>
+                        <h3>Real-Time Data Transmission</h3>
+                        <p>2.4GHz wireless communication with 500-600 meter range for immediate data access and analysis.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class='bx bx-chip'></i>
+                        </div>
+                        <h3>Autonomous Flight Control</h3>
+                        <p>KK2.1.5 flight controller with MPU-6050 gyroscope and accelerometer for stable, precise navigation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <h3>Advanced Data Processing</h3>
+                        <p>Python-based algorithms for point cloud generation, 2D reconstruction, and cartesian coordinate mapping.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class='bx bx-battery-charging'></i>
+                        </div>
+                        <h3>Optimized Power Management</h3>
+                        <p>3S LiPo battery system (11.1V, 2200mAh) with 20C discharge rate for extended flight operations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class='bx bx-data'></i>
+                        </div>
+                        <h3>Onboard Data Storage</h3>
+                        <p>Memory card integration for secure data storage and deferred analysis capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== TECHNICAL ARCHITECTURE =====-->
+        <section class="project-section architecture-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Technical Architecture</h2>
+                
+                <div class="architecture-content">
+                    <h3>Data Flow Architecture</h3>
+                    <div class="diagram-container">
+                        <img src="assets/img/lidar/Data Flow diagram.png" alt="Data Flow Diagram" class="architecture-diagram">
+                        <div class="diagram-caption">
+                            <p><strong>Data Flow:</strong> User-initiated drone control triggers the data collection process where LiDAR generates 2D cloud points. The system processes this raw data and stores it on memory cards while generating real-time mapping output.</p>
+                        </div>
+                    </div>
+
+                    <h3>System Architecture</h3>
+                    <div class="diagram-container">
+                        <img src="assets/img/lidar/Block Diagram.png" alt="Block Diagram" class="architecture-diagram">
+                        <div class="diagram-caption">
+                            <p><strong>Block Diagram:</strong> Complete system architecture showing the integration of transmitter/receiver (2.4GHz), YD Lidar X2, Arduino Uno, KK Controller Board, ESCs, and BLDC motors powered by LiPo battery system.</p>
+                        </div>
+                    </div>
+
+                    <h3>Circuit Architecture</h3>
+                    <div class="diagram-container">
+                        <img src="assets/img/lidar/Circuit Diagram.png" alt="Circuit Diagram" class="architecture-diagram">
+                        <div class="diagram-caption">
+                            <p><strong>Circuit Design:</strong> Detailed wiring schematic showing receiver connections to Arduino Uno, MPU-6050 integration, and ESC configurations for four BLDC motors with proper power distribution from the 3-cell LiPo battery.</p>
+                        </div>
+                    </div>
+
+                    <h3>LiDAR Output Visualization</h3>
+                    <div class="diagram-container">
+                        <img src="assets/img/lidar/lidar output.png" alt="LiDAR Output" class="architecture-diagram">
+                        <div class="diagram-caption">
+                            <p><strong>Real-Time Output:</strong> YD Lidar visualization showing 2D point cloud generation in polar coordinates with intensity and range data, demonstrating the system's capability to detect and map surrounding objects.</p>
+                        </div>
+                    </div>
+
+                    <h3>Data Processing Results</h3>
+                    <div class="diagram-container">
+                        <img src="assets/img/lidar/output.png" alt="Data Visualization" class="architecture-diagram">
+                        <div class="diagram-caption">
+                            <p><strong>Processed Data:</strong> Python-based visualization showing LiDAR points converted to Cartesian coordinates, creating accurate 2D representations of scanned environments for mapping applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== TECH STACK =====-->
+        <section class="project-section tech-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Technology Stack</h2>
+                
+                <div class="tech-category">
+                    <h3><i class='bx bx-chip'></i> Hardware Components</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class='bx bx-microchip'></i>
+                            <span>Arduino Uno (ATmega328P)</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-radar'></i>
+                            <span>YD Lidar X2 Sensor</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-game'></i>
+                            <span>KK2.1.5 Flight Controller</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-broadcast'></i>
+                            <span>2.4GHz Radio System (6CH)</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-bolt'></i>
+                            <span>A2212/13T 1000KV BLDC Motors</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-battery-full'></i>
+                            <span>3S LiPo Battery (11.1V)</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-cog'></i>
+                            <span>Simonk 30A ESCs (x4)</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-shape-circle'></i>
+                            <span>MPU-6050 Gyro/Accelerometer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3><i class='bx bx-code-alt'></i> Software & Tools</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class='bx bxl-python'></i>
+                            <span>Python 3.x</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-code-block'></i>
+                            <span>Embedded C</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-desktop'></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-terminal'></i>
+                            <span>Arduino IDE</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-chart'></i>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-math'></i>
+                            <span>NumPy & Pandas</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-cube'></i>
+                            <span>ROS1 (YD Lidar Driver)</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class='bx bx-server'></i>
+                            <span>YD Lidar SDK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-specs">
+                    <h3>System Specifications</h3>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>LiDAR Specifications</h4>
+                            <ul>
+                                <li><strong>Range:</strong> 8 meters</li>
+                                <li><strong>Scan Angle:</strong> 360°</li>
+                                <li><strong>Resolution:</strong> 0.36°</li>
+                                <li><strong>Frequency:</strong> 5000Hz</li>
+                                <li><strong>Voltage:</strong> 5V DC</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Drone Specifications</h4>
+                            <ul>
+                                <li><strong>Frame:</strong> HJF 450 (X-shape)</li>
+                                <li><strong>Wingspan:</strong> 450mm</li>
+                                <li><strong>Flight Time:</strong> ~15 minutes</li>
+                                <li><strong>Control Range:</strong> 500-600m</li>
+                                <li><strong>Max Current:</strong> 13A per motor</li>
+                            </ul>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Development Platform</h4>
+                            <ul>
+                                <li><strong>Processor:</strong> Intel Core i3+</li>
+                                <li><strong>RAM:</strong> 6GB minimum</li>
+                                <li><strong>Storage:</strong> 256GB+</li>
+                                <li><strong>OS:</strong> Windows/Linux</li>
+                                <li><strong>Connectivity:</strong> WiFi/USB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== DEVELOPMENT PROCESS =====-->
+        <section class="project-section process-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Development Process</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class='bx bx-clipboard'></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Phase 1: Planning & Research</h3>
+                            <p>Conducted comprehensive literature survey on LiDAR technology and drone mapping. Defined functional and non-functional requirements, established project scope covering forestry, agriculture, and urban planning applications.</p>
+                            <ul class="timeline-list">
+                                <li>Literacy survey and case study analysis</li>
+                                <li>Component selection and specification</li>
+                                <li>Budget planning (₹15,064 total)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class='bx bx-wrench'></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Phase 2: Hardware Development</h3>
+                            <p>Assembled the drone platform with HJF 450 frame, integrated flight controller, and mounted the YD Lidar X2 sensor. Configured ESCs, calibrated sensors, and established power distribution system.</p>
+                            <ul class="timeline-list">
+                                <li>Drone frame assembly and motor installation</li>
+                                <li>Flight controller configuration (KK2.1.5)</li>
+                                <li>LiDAR sensor integration with Arduino Uno</li>
+                                <li>Power system setup and testing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class='bx bx-code'></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Phase 3: Software Development</h3>
+                            <p>Developed embedded C code for Arduino to interface with LiDAR sensor. Created Python scripts for data processing, point cloud generation, and visualization using Matplotlib and NumPy libraries.</p>
+                            <ul class="timeline-list">
+                                <li>Arduino firmware for sensor communication</li>
+                                <li>Python data processing pipeline</li>
+                                <li>ROS1 driver integration</li>
+                                <li>Real-time visualization system</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class='bx bx-test-tube'></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Phase 4: Testing & Validation</h3>
+                            <p>Conducted extensive testing including unit tests, integration tests, and field trials. Validated LiDAR accuracy, flight stability, and data transmission reliability across various environmental conditions.</p>
+                            <ul class="timeline-list">
+                                <li>Black-box and white-box testing</li>
+                                <li>20+ comprehensive test cases</li>
+                                <li>Environmental condition testing</li>
+                                <li>Accuracy validation (within 2% margin)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== RESULTS & ACHIEVEMENTS =====-->
+        <section class="project-section results-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Results & Achievements</h2>
+                
+                <div class="results-grid">
+                    <div class="result-card highlight">
+                        <div class="result-icon">
+                            <i class='bx bx-check-circle'></i>
+                        </div>
+                        <h3>95% Test Success Rate</h3>
+                        <p>Successfully passed 19 out of 20 comprehensive test cases covering calibration, flight control, data acquisition, and environmental performance.</p>
+                    </div>
+
+                    <div class="result-card highlight">
+                        <div class="result-icon">
+                            <i class='bx bx-bullseye'></i>
+                        </div>
+                        <h3>±2% Accuracy</h3>
+                        <p>Achieved LiDAR data accuracy within 2% margin when compared against known measurements, meeting industry standards for precision mapping.</p>
+                    </div>
+
+                    <div class="result-card highlight">
+                        <div class="result-icon">
+                            <i class='bx bx-area'></i>
+                        </div>
+                        <h3>360° Coverage</h3>
+                        <p>Full panoramic scanning capability with 0.36° resolution, enabling comprehensive terrain mapping and obstacle detection.</p>
+                    </div>
+                </div>
+
+                <div class="achievements">
+                    <h3>Key Achievements</h3>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <i class='bx bx-check'></i>
+                            <span>Successfully integrated YD Lidar X2 with custom drone platform</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class='bx bx-check'></i>
+                            <span>Developed real-time 2D point cloud generation system</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class='bx bx-check'></i>
+                            <span>Implemented autonomous flight control with stable hover capability</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class='bx bx-check'></i>
+                            <span>Created Python-based data visualization and analysis tools</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class='bx bx-check'></i>
+                            <span>Validated system performance across multiple environmental conditions</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class='bx bx-check'></i>
+                            <span>Demonstrated cost-effective alternative to traditional aerial mapping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== CHALLENGES & SOLUTIONS =====-->
+        <section class="project-section challenges-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Challenges & Solutions</h2>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <i class='bx bx-error-circle'></i>
+                            <h3>Sensor Calibration Complexity</h3>
+                        </div>
+                        <p class="challenge-problem"><strong>Challenge:</strong> Initial difficulty in achieving accurate LiDAR calibration and data synchronization with flight controller.</p>
+                        <p class="challenge-solution"><strong>Solution:</strong> Implemented rigorous calibration protocols using ground truth measurements and developed automated validation routines. Used MPU-6050 data fusion for improved accuracy.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <i class='bx bx-error-circle'></i>
+                            <h3>Battery Management</h3>
+                        </div>
+                        <p class="challenge-problem"><strong>Challenge:</strong> Battery monitoring system initially failed to provide accurate alerts, creating safety risks.</p>
+                        <p class="challenge-solution"><strong>Solution:</strong> Enhanced battery monitoring algorithm with multiple threshold levels and implemented failsafe return-to-home function at critical battery levels.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <i class='bx bx-error-circle'></i>
+                            <h3>Data Processing Overhead</h3>
+                        </div>
+                        <p class="challenge-problem"><strong>Challenge:</strong> Real-time processing of high-volume LiDAR data (5000Hz) created computational bottlenecks.</p>
+                        <p class="challenge-solution"><strong>Solution:</strong> Optimized Python processing pipeline using NumPy vectorization and implemented efficient buffering strategies. Added option for deferred analysis using onboard storage.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <i class='bx bx-error-circle'></i>
+                            <h3>Environmental Interference</h3>
+                        </div>
+                        <p class="challenge-problem"><strong>Challenge:</strong> LiDAR performance degraded in certain weather conditions (fog, direct sunlight).</p>
+                        <p class="challenge-solution"><strong>Solution:</strong> Conducted extensive environmental testing, established operational guidelines, and implemented adaptive filtering algorithms to minimize interference effects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== FUTURE SCOPE =====-->
+        <section class="project-section future-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Future Enhancements</h2>
+                
+                <div class="future-grid">
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class='bx bx-brain'></i>
+                        </div>
+                        <h3>AI Integration</h3>
+                        <p>Implement machine learning algorithms for automatic feature extraction, object classification, and predictive terrain analysis.</p>
+                    </div>
+
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class='bx bx-radar'></i>
+                        </div>
+                        <h3>Advanced Sensors</h3>
+                        <p>Integrate thermal imaging and multispectral cameras for comprehensive environmental monitoring and vegetation health assessment.</p>
+                    </div>
+
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <h3>GIS Integration</h3>
+                        <p>Develop seamless integration with Geographic Information Systems for enhanced data sharing and collaborative mapping projects.</p>
+                    </div>
+
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class='bx bx-cloud'></i>
+                        </div>
+                        <h3>Cloud Processing</h3>
+                        <p>Implement cloud-based data processing for scalable computing and faster turnaround times for large datasets.</p>
+                    </div>
+
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class='bx bx-bot'></i>
+                        </div>
+                        <h3>Full Autonomy</h3>
+                        <p>Develop complete autonomous mission planning with obstacle avoidance and adaptive path optimization.</p>
+                    </div>
+
+                    <div class="future-card">
+                        <div class="future-icon">
+                            <i class='bx bx-leaf'></i>
+                        </div>
+                        <h3>Environmental Monitoring</h3>
+                        <p>Expand applications for habitat monitoring, land cover classification, and natural disaster impact assessment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== APPLICATIONS =====-->
+        <section class="project-section applications-section">
+            <div class="project-container bd-grid">
+                <h2 class="section-title">Real-World Applications</h2>
+                
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <i class='bx bx-leaf'></i>
+                        <h3>Forestry Management</h3>
+                        <p>Assess forest structure, estimate biomass, analyze canopy cover, and monitor deforestation in challenging terrain.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class='bx bx-building'></i>
+                        <h3>Construction & Engineering</h3>
+                        <p>Conduct site surveys, monitor project progress, perform volumetric analysis, and ensure structural safety.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class='bx bx-medal'></i>
+                        <h3>Archaeology</h3>
+                        <p>Discover and document archaeological sites with minimal ground disturbance, creating detailed 2D site maps.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class='bx bx-world'></i>
+                        <h3>Urban Planning</h3>
+                        <p>Generate accurate city models for infrastructure development, traffic planning, and environmental impact studies.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class='bx bx-first-aid'></i>
+                        <h3>Disaster Management</h3>
+                        <p>Rapid assessment of disaster-affected areas for emergency response planning and damage evaluation.</p>
+                    </div>
+
+                    <div class="application-card">
+                        <i class='bx bx-cart'></i>
+                        <h3>Precision Agriculture</h3>
+                        <p>Monitor crop health, assess field conditions, and optimize resource management with detailed aerial maps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== PROJECT LINKS =====-->
+        <section class="project-section cta-section">
+            <div class="project-container bd-grid">
+                <div class="cta-content">
+                    <h2>Interested in This Project?</h2>
+                    <p>Feel free to reach out for more details, collaboration opportunities, or technical discussions.</p>
+                    <div class="cta-buttons">
+                        <a href="index.html#contact" class="button">Get in Touch</a>
+                        <a href="index.html#work" class="button button-outline">View More Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--===== BACK TO TOP BUTTON =====-->
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Rahul Bandi</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/rahul-bandi-479272272/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/rahul._.bandi_/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/Bandi-Rahul" class="footer__icon"><i class='bx bxl-github'></i></a>
+        </div>
+        <p class="footer__copy">&#169; 2025 Rahul Bandi. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
