@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Bandi - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-text: #1a1a1a;
+      --color-text-secondary: #444;
+      --color-accent: #2563eb;
+      --color-border: #d1d5db;
+      --color-bg: #ffffff;
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html {
+      font-size: 15px;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text);
+      background: #f3f4f6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: var(--color-bg);
+      padding: 2.5rem 3rem;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.08);
+      border-radius: 4px;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      text-align: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2rem;
+    }
+
+    .header .subtitle {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .header .contact-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+    }
+
+    .header .contact-row a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    .header .contact-row a:hover {
+      text-decoration: underline;
+    }
+
+    .separator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      margin-bottom: 1.4rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      border-bottom: 1.5px solid var(--color-border);
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ---- Experience ---- */
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-header h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .exp-header .date {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .exp-list li {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .exp-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* ---- Education ---- */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.15rem;
+    }
+
+    .edu-row h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .edu-row .detail {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+
+    .edu-sub {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ---- Skills ---- */
+    .skills-table {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.4rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .skills-label {
+      font-weight: 600;
+      color: var(--color-text);
+      font-size: 0.85rem;
+    }
+
+    .skills-value {
+      color: var(--color-text-secondary);
+    }
+
+    /* ---- Projects ---- */
+    .project {
+      margin-bottom: 0.75rem;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline;
+    }
+
+    .project .tech {
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+
+    .project p {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      margin-top: 0.15rem;
+    }
+
+    /* ---- Certifications ---- */
+    .cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .cert-list li {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .cert-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .cert-list li strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* ---- Print ---- */
+    @media print {
+      html {
+        font-size: 13px;
+      }
+
+      body {
+        background: white;
+      }
+
+      .page {
+        margin: 0;
+        padding: 0.5in 0.6in;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+      }
+
+      .section {
+        margin-bottom: 1rem;
+      }
+
+      .header {
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: var(--color-text-secondary) !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        margin: 0;
+        padding: 1.5rem 1.25rem;
+        border-radius: 0;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+      }
+
+      .skills-table {
+        grid-template-columns: 1fr;
+      }
+
+      .exp-header, .edu-row {
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Rahul Bandi</h1>
+      <p class="subtitle">Software Technician &mdash; Build &amp; Release &middot; CI/CD &middot; Automation</p>
+      <div class="contact-row">
+        <span>Bengaluru, India</span>
+        <span class="separator">&middot;</span>
+        <a href="mailto:rahulbandi568@gmail.com">rahulbandi568@gmail.com</a>
+        <span class="separator">&middot;</span>
+        <a href="https://www.linkedin.com/in/rahul-bandi-479272272/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="separator">&middot;</span>
+        <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <h2 class="section-title">Summary</h2>
+      <p style="font-size:0.9rem; color:var(--color-text-secondary);">
+        Curious engineer focused on build &amp; release systems, CI/CD automation, and reliability. Experienced in diagnosing pipeline failures, developing automation tools, and reducing manual effort for engineering teams. Strong foundation in hands-on engineering from IoT competitions to enterprise CI systems. Currently pursuing B.Tech in AI &amp; ML from BITS Pilani.
+      </p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <h2 class="section-title">Experience</h2>
+      <div>
+        <div class="exp-header">
+          <h3>Software Technician &mdash; Build, Test &amp; Release</h3>
+          <span class="date">Jul 2024 &ndash; Present</span>
+        </div>
+        <p class="exp-company">National Instruments (Emerson) &middot; Bengaluru, India</p>
+        <ul class="exp-list">
+          <li>Manage build and release workflows for multiple drivers and software components</li>
+          <li>Investigate CI failures including flaky tests, dependency issues, and system-level problems</li>
+          <li>Develop automation tools to streamline CI monitoring and reduce manual effort</li>
+          <li>Improve release reliability through proactive failure analysis and root cause investigation</li>
+          <li>Support onboarding and knowledge sharing within the team</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div>
+        <div class="edu-row">
+          <h3>B.Tech in Artificial Intelligence &amp; Machine Learning</h3>
+          <span class="detail">In Progress</span>
+        </div>
+        <p class="edu-sub">BITS Pilani &mdash; Work Integrated Learning Programme (WILP)</p>
+      </div>
+      <div>
+        <div class="edu-row">
+          <h3>Diploma in Mechatronics Engineering</h3>
+          <span class="detail">Grade: 9.07</span>
+        </div>
+        <p class="edu-sub">Nettur Technical Training Foundation (NTTF)</p>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-table">
+        <span class="skills-label">Programming</span>
+        <span class="skills-value">Python (Automation, Scripting), Bash / Shell Scripting</span>
+
+        <span class="skills-label">Tools</span>
+        <span class="skills-value">Selenium, Azure DevOps, Git, CI/CD Systems, Build Systems (Make, Yocto)</span>
+
+        <span class="skills-label">Core Areas</span>
+        <span class="skills-value">Build &amp; Release Engineering, CI Failure Analysis &amp; Debugging, Automation Development, Log Analysis &amp; Root Cause Investigation</span>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project">
+        <h3>CI Dashboard Automation Tool</h3> <span class="tech">&nbsp;&mdash; Python, Selenium</span>
+        <p>Built a tool to monitor CI dashboards and extract build/test data automatically, replacing manual tracking with intelligent filtering and structured output. Reduced manual monitoring effort and improved pipeline visibility.</p>
+      </div>
+
+      <div class="project">
+        <h3>Automated CI Event Management</h3> <span class="tech">&nbsp;&mdash; Python, Selenium</span>
+        <p>Developed a system to detect stale CI events and automatically trigger corrective actions, keeping pipelines active with controlled execution. Reduced pipeline delays and minimized manual intervention.</p>
+      </div>
+
+      <div class="project">
+        <h3>Build Failure Analysis &amp; Debugging</h3> <span class="tech">&nbsp;&mdash; Log Analysis, CI/CD, Python</span>
+        <p>Analyzed and resolved build failures across environments &mdash; diagnosing dependency issues, timeouts, and misconfigurations through deep log analysis. Improved release pipeline stability.</p>
+      </div>
+
+      <div class="project">
+        <h3>IoT-Based CanSat Project</h3> <span class="tech">&nbsp;&mdash; IoT, Embedded Systems, Sensors</span>
+        <p>Built a small-scale satellite simulation system for international engineering competitions involving sensor integration, real-time data processing, and embedded communication.</p>
+      </div>
+    </div>
+
+    <!-- Certifications & Achievements -->
+    <div class="section">
+      <h2 class="section-title">Certifications &amp; Achievements</h2>
+      <ul class="cert-list">
+        <li><strong>Blockchain &mdash; IIT Kanpur:</strong> Professional Certificate Program in Blockchain from the Indian Institute of Technology, Kanpur</li>
+        <li><strong>IEEE Brixia European CanSat Competition:</strong> Participated in the European CanSat Competition</li>
+        <li><strong>DSU CanSat Competition:</strong> Participated in the DSU CanSat Competition</li>
+        <li><strong>Early Career Transition:</strong> Transitioned into Build &amp; Release Engineering early in career, contributing to CI automation and workflow improvements</li>
+      </ul>
+    </div>
+
+    <!-- Currently Learning -->
+    <div class="section">
+      <h2 class="section-title">Currently Learning</h2>
+      <p style="font-size:0.9rem; color:var(--color-text-secondary);">
+        Mathematics for Machine Learning &middot; Discrete Mathematics &amp; Graph Theory &middot; Advanced Python Programming &middot; System Design &amp; Scalable Automation
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

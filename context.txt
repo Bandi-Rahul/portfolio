@@ -1,0 +1,146 @@
+🔹 Rahul Bandi - Updated Portfolio Content (FINAL)
+🔸 Professional Summary
+
+Software Technician specializing in Build, Test, and Release workflows with hands-on experience in CI/CD systems, automation, and debugging complex build failures. Currently working at National Instruments (Emerson), focusing on improving release reliability and streamlining engineering workflows.
+
+Experienced in building Python-based automation tools, optimizing CI processes, and analyzing flaky test failures in large-scale systems. Strong foundation in problem-solving with a growing focus on machine learning and intelligent systems.
+
+🔸 About Me
+
+Hi, I’m Rahul - a curious engineer and lifelong tinkerer.
+
+I enjoy working on problems that sit at the intersection of systems, automation, and reliability. In my current role, I focus on making CI pipelines smoother and reducing friction for teams downstream. Whether it’s debugging a tricky failure or automating repetitive workflows, I like building solutions that save time and scale.
+
+My roots are in hands-on engineering - from IoT projects to CanSat competitions - and I’m currently expanding into AI/ML to build smarter systems.
+
+🔸 Skills
+Programming
+Python (Automation, Scripting)
+Bash / Command-line scripting
+Tools & Technologies
+Selenium (Web Automation)
+Azure DevOps
+Git & Version Control
+CI/CD Systems
+Build Systems (Make, Yocto-based environments)
+Core Areas
+Build & Release Engineering
+CI Failure Analysis & Debugging
+Automation Development
+Log Analysis & Root Cause Investigation
+🔸 Work Experience
+Software Technician - Build, Test & Release (BTR)
+
+National Instruments (Emerson)
+📍 Bengaluru, India | Jul 2024 – Present
+
+Responsibilities:
+
+Managed build and release workflows for multiple drivers and software components
+Ensured release readiness by validating builds and resolving failures
+Investigated CI failures, including flaky tests and system-level issues
+Developed automation tools to streamline CI monitoring and workflows
+Supported onboarding and knowledge sharing within the team
+
+Key Contributions:
+
+Improved CI efficiency through automation and workflow optimization
+Reduced manual effort in repetitive engineering tasks
+Strengthened release reliability through proactive failure analysis
+🔥 🔹 Projects
+🔸 CI Dashboard Automation Tool
+
+Tech: Python, Selenium
+
+Description:
+Built an automation tool to monitor CI dashboards and extract relevant build and test data, reducing manual tracking effort.
+
+Key Features:
+
+Automated navigation and scraping from dynamic web interfaces
+Intelligent filtering of events based on status
+Structured data output for easier analysis
+
+Impact:
+
+Reduced manual monitoring effort
+Improved visibility into CI pipeline health
+🔸 Automated CI Event Management System
+
+Tech: Python, Selenium
+
+Description:
+Developed a system to identify stale CI events and automatically trigger actions to keep pipelines active and efficient.
+
+Key Features:
+
+Detection of stale events using configurable logic
+Automation of multi-step UI workflows
+Controlled execution to prevent overload
+
+Impact:
+
+Reduced delays in CI pipelines
+Minimized manual intervention
+Improved system responsiveness
+🔸 Build Failure Analysis & Debugging
+
+Description:
+Worked on analyzing and resolving build failures across multiple environments and systems.
+
+Key Contributions:
+
+Diagnosed issues related to dependencies, timeouts, and build configurations
+Performed deep log analysis to trace failure points
+Collaborated with teams to resolve issues efficiently
+
+Impact:
+
+Faster resolution of build failures
+Improved stability of release pipelines
+🔸 IoT-Based CanSat Project
+
+Event: International Engineering Competitions
+
+Description:
+Worked on a small-scale satellite simulation system involving embedded systems and IoT concepts.
+
+Key Contributions:
+
+System integration and sensor handling
+Real-time data processing and communication
+Hands-on experience in embedded environments
+
+Impact:
+
+Strong foundation in real-world engineering systems
+Experience working under constraints and competition settings
+🔸 Education
+Bachelor of Technology (B.Tech) - Artificial Intelligence & Machine Learning
+
+BITS Pilani Work Integrated Learning Programmes
+📅 2025 – 2028
+
+Diploma / Engineering Foundation
+
+NTTF (Nettur Technical Training Foundation)
+📅 2021 – 2024
+Grade: 9.07
+
+🔸 Certifications
+Professional Certificate Program in Blockchain - Indian Institute of Technology, Kanpur
+(certificate is in file:///C:/Users/rbandi/OneDrive%20-%20NI/Documents/IIT.pdf)
+
+🔸 Achievements
+Participated in European CanSat Competition (IEEE Brixia) (certificate in file:///C:/Users/rbandi/OneDrive%20-%20NI/Documents/IEEE.pdf)
+Participated in DSU CanSat Competition (certificate is in file:///C:/Users/rbandi/OneDrive%20-%20NI/Documents/DSU%201.pdf)
+Transitioned into Build & Release Engineering role early in career
+Contributed to CI automation and workflow improvements
+🔸 Learning & Development
+
+Currently focusing on:
+
+Mathematics for Machine Learning
+Discrete Mathematics & Graph Theory
+Advanced Python Programming
+System Design & Scalable Automation

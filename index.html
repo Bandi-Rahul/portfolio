@@ -1,345 +1,403 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Bandi - Software Technician</title>
+  <meta name="description" content="Portfolio of Rahul Bandi - Software Technician specializing in Build & Release, CI/CD, and Automation.">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rahul Bandi - Software Technician">
+  <meta property="og:description" content="Build & Release Engineer specializing in CI/CD, Automation, and Reliability. Currently at National Instruments (Emerson).">
+  <meta property="og:image" content="img/og-banner.svg">
+  <meta property="og:url" content="">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        
-        <!-- =====FONT AWESOME===== -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rahul Bandi - Software Technician">
+  <meta name="twitter:description" content="Build & Release Engineer specializing in CI/CD, Automation, and Reliability.">
+  <meta name="twitter:image" content="img/og-banner.svg">
 
-        <!-- =====EMAIL JS===== -->
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        
-        <!-- =====TYPED JS===== -->
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        
-        <!-- =====PARTICLES JS===== -->
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <title>Portfolio - Rahul Bandi</title>
-    </head>
-    <body>
-        <!--===== SCROLL PROGRESS BAR =====-->
-        <div class="scroll-progress-bar" id="scroll-progress"></div>
-        
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Rahul Bandi</a>
-                </div>
+  <a href="#hero" class="sr-only">Skip to main content</a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo">RB</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-                <div class="nav__actions">
-                    <div class="theme-toggle" id="theme-toggle">
-                        <i class='bx bx-moon'></i>
-                    </div>
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class='bx bx-menu'></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
+  <!-- Hero -->
+  <header id="hero" class="hero">
+    <div class="container hero-grid fade-in">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Rahul Bandi</h1>
+        <p class="hero-title">Software Technician &middot; Build &amp; Release &middot; Automation</p>
+        <p class="hero-tagline">I build reliable systems and automate complex workflows.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact</a>
+          <a href="resume.html" download="Rahul_Bandi_Resume.html" class="btn btn-outline">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/Rahul_Bandi_rm_bg.png" alt="Rahul Bandi" />
+      </div>
+    </div>
+    
+  </header>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div id="particles-js"></div>
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Rahul Bandi</span><br><span id="typed"></span></h1>
-                    <p class="home__description">Passionate about IoT innovations and cutting-edge technology <br>solutions that shape our digital future.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">About</h2>
+      <div class="about-content">
+        <p>
+          I'm a curious engineer and lifelong tinkerer. I enjoy working on problems at the intersection of systems, automation, and reliability. In my current role at National Instruments (Emerson), I focus on making CI pipelines smoother and reducing friction for engineering teams.
+        </p>
+        <p>
+          Whether it's debugging a tricky build failure or automating repetitive workflows, I like building solutions that save time and scale well. My roots are in hands-on engineering - from IoT projects to CanSat competitions - and I'm currently expanding into AI/ML to build smarter systems.
+        </p>
+        <div class="about-details">
+          <div class="about-detail">
+            <span class="about-label">Location</span>
+            <span>Bengaluru, India</span>
+          </div>
+          <div class="about-detail">
+            <span class="about-label">Education</span>
+            <span>B.Tech AI &amp; ML - BITS Pilani (WILP)</span>
+          </div>
+          <div class="about-detail">
+            <span class="about-label">Foundation</span>
+            <span>NTTF - Grade 9.07</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                    <a href="#contact" class="button button-pulse">Contact me</a>
-                    <a href="#work" class="button button-outline">View Projects</a>
-                </div>
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in">Skills</h2>
+      <div class="skills-grid fade-in">
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python (Automation, Scripting)</li>
+            <li>Bash / Shell Scripting</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools &amp; Technologies</h3>
+          <ul>
+            <li>Selenium</li>
+            <li>Azure DevOps</li>
+            <li>Git &amp; Version Control</li>
+            <li>CI/CD Systems</li>
+            <li>Build Systems (Make, Yocto)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Core Areas</h3>
+          <ul>
+            <li>Build &amp; Release Engineering</li>
+            <li>CI Failure Analysis &amp; Debugging</li>
+            <li>Automation Development</li>
+            <li>Log Analysis &amp; Root Cause Investigation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/rahul-bandi-479272272/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/rahul._.bandi_/" class="home__social-icon"><i class='bx bxl-instagram-alt'></i></a>
-                    <a href="https://github.com/Bandi-Rahul" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Projects</h2>
+      <div class="projects-grid fade-in">
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 620" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+        <article class="project-card">
+          <div class="project-header">
+            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Monitor icon"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <h3>CI Dashboard Automation Tool</h3>
+          </div>
+          <p>Built a tool to monitor CI dashboards and extract build/test data automatically, replacing manual tracking with intelligent filtering and structured output.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Selenium</span>
+          </div>
+          <p class="project-impact">Reduced manual monitoring effort and improved pipeline visibility.</p>
+          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+        </article>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+        <article class="project-card">
+          <div class="project-header">
+            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Code icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <h3>Automated CI Event Management</h3>
+          </div>
+          <p>Developed a system to detect stale CI events and automatically trigger corrective actions, keeping pipelines active with controlled execution to prevent overload.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Selenium</span>
+          </div>
+          <p class="project-impact">Reduced pipeline delays and minimized manual intervention.</p>
+          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+        </article>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpeg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">Hi Again,<br>I'm Rahul Bandi</h2>
-                        <p class="about__text">I'm passionate about exploring the potential of IoT and diving into innovative tech solutions.
-                            I thrive on experimenting with emerging technologies to create smart, adaptable systems that solve real-world problems. 
-                            My expertise spans across various programming languages and frameworks, always staying curious about how technology 
-                            can reshape our digital landscape. If you're interested in collaboration or discussing tech innovations, I'd love to connect!</p>           
-                    </div>                                   
-                </div>
-            </section>
+        <article class="project-card">
+          <div class="project-header">
+            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Document icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <h3>Build Failure Analysis &amp; Debugging</h3>
+          </div>
+          <p>Analyzed and resolved build failures across environments - diagnosing dependency issues, timeouts, and misconfigurations through deep log analysis.</p>
+          <div class="project-tech">
+            <span>Log Analysis</span>
+            <span>CI/CD</span>
+            <span>Python</span>
+          </div>
+          <p class="project-impact">Faster failure resolution and improved release pipeline stability.</p>
+          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+        </article>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+        <article class="project-card">
+          <div class="project-header">
+            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Globe icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <h3>IoT-Based CanSat Project</h3>
+          </div>
+          <p>Built a small-scale satellite simulation system for international engineering competitions, involving sensor integration, real-time data processing, and embedded communication.</p>
+          <div class="project-tech">
+            <span>IoT</span>
+            <span>Embedded Systems</span>
+            <span>Sensors</span>
+          </div>
+          <p class="project-impact">Competed at IEEE Brixia (European CanSat) and DSU CanSat competitions.</p>
+          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+        </article>
 
-                <div class="skills__container">          
-                    <div class="skills__content">
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">I specialize in modern web development technologies and IoT solutions, with a focus on creating responsive, 
-                        user-friendly applications that leverage cutting-edge technologies to solve complex problems.</p>
-                        
-                        <!-- Skills Row 1: HTML5 & CSS3 -->
-                        <div class="skills__row">
-                            <div class="skills__data skills__data-left">
-                                <div class="skills__names">
-                                    <i class='bx bxl-html5 skills__icon'></i>
-                                    <span class="skills__name">HTML5</span>
-                                </div>
-                                <div class="skills__bar skills__html"></div>
-                                <div>
-                                    <span class="skills__percentage">95%</span>
-                                </div>
-                            </div>
-                            <div class="skills__data skills__data-right">
-                                <div class="skills__names">
-                                    <i class='bx bxl-css3 skills__icon'></i>
-                                    <span class="skills__name">CSS3</span>
-                                </div>
-                                <div class="skills__bar skills__css"></div>
-                                <div>
-                                    <span class="skills__percentage">85%</span>
-                                </div>
-                            </div>
-                        </div>
+      </div>
+    </div>
+  </section>
 
-                        <!-- Skills Row 2: JavaScript & Python -->
-                        <div class="skills__row">
-                            <div class="skills__data skills__data-left">
-                                <div class="skills__names">
-                                    <i class='bx bxl-javascript skills__icon'></i>
-                                    <span class="skills__name">JAVASCRIPT</span>
-                                </div>
-                                <div class="skills__bar skills__js"></div>
-                                <div>
-                                    <span class="skills__percentage">65%</span>
-                                </div>
-                            </div>
-                            <div class="skills__data skills__data-right">
-                                <div class="skills__names">
-                                    <i class='fab fa-python skills__icon'></i>
-                                    <span class="skills__name">PYTHON</span>
-                                </div>
-                                <div class="skills__bar skills__python"></div>
-                                <div>
-                                    <span class="skills__percentage">80%</span>
-                                </div>
-                            </div>
-                        </div>
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in">Experience</h2>
+      <div class="experience-block">
+        <div class="experience-header">
+          <div>
+            <h3>Software Technician - Build, Test &amp; Release</h3>
+            <p class="experience-company">National Instruments (Emerson)</p>
+          </div>
+          <span class="experience-date">Jul 2024 - Present</span>
+        </div>
+        <ul class="experience-list">
+          <li>Manage build and release workflows for multiple drivers and software components</li>
+          <li>Investigate CI failures - flaky tests, dependency issues, and system-level problems</li>
+          <li>Develop automation tools to streamline CI monitoring and reduce manual effort</li>
+          <li>Improve release reliability through proactive failure analysis and root cause investigation</li>
+          <li>Support onboarding and knowledge sharing within the team</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-                        <!-- Skills Row 3: React & IoT -->
-                        <div class="skills__row">
-                            <div class="skills__data skills__data-left">
-                                <div class="skills__names">
-                                    <i class='bx bxl-react skills__icon'></i>
-                                    <span class="skills__name">REACT</span>
-                                </div>
-                                <div class="skills__bar skills__react"></div>
-                                <div>
-                                    <span class="skills__percentage">75%</span>
-                                </div>
-                            </div>
-                            <div class="skills__data skills__data-right">
-                                <div class="skills__names">
-                                    <i class='bx bx-microchip skills__icon'></i>
-                                    <span class="skills__name">IoT</span>
-                                </div>
-                                <div class="skills__bar skills__iot"></div>
-                                <div>
-                                    <span class="skills__percentage">70%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
+  <!-- Certifications & Achievements -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Certifications &amp; Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          <div>
+            <h3>Blockchain - IIT Kanpur</h3>
+            <p>Professional Certificate Program in Blockchain from the Indian Institute of Technology, Kanpur</p>
+            <a href="img/IIT.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View IIT Kanpur Blockchain certificate (opens in new tab)">View Certificate <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </span>
+          <div>
+            <h3>European CanSat Competition</h3>
+            <p>Participated in the IEEE Brixia European CanSat Competition</p>
+            <a href="img/IEEE.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View IEEE Brixia CanSat certificate (opens in new tab)">View Certificate <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </span>
+          <div>
+            <h3>DSU CanSat Competition</h3>
+            <p>Participated in the DSU CanSat Competition</p>
+            <a href="img/DSU%201.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View DSU CanSat certificate (opens in new tab)">View Certificate <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <span class="achievement-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </span>
+          <div>
+            <h3>Early Career Transition</h3>
+            <p>Transitioned into Build &amp; Release Engineering early in career, contributing to CI automation and workflow improvements</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Projects</h2>
-                <p class="work__intro">Here are some of my recent projects that showcase my skills and creativity</p>
+  <!-- Learning -->
+  <section id="learning" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Currently Learning</h2>
+      <div class="learning-grid fade-in">
+        <div class="learning-item">
+          <span class="learning-icon">📐</span>
+          <span>Mathematics for Machine Learning</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">🔢</span>
+          <span>Discrete Mathematics &amp; Graph Theory</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">🐍</span>
+          <span>Advanced Python Programming</span>
+        </div>
+        <div class="learning-item">
+          <span class="learning-icon">⚙️</span>
+          <span>System Design &amp; Scalable Automation</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="work__container bd-grid">
-                    <div class="work__card">
-                        <div class="work__img">
-                            <img src="assets/img/lidar/output.png" alt="Drone-Based Aerial Mapping">
-                            <div class="work__overlay">
-                                <h3 class="work__title">Drone-Based Aerial Mapping</h3>
-                                <p class="work__description">LiDAR-integrated autonomous mapping system</p>
-                                <div class="work__links">
-                                    <a href="project-drone-mapping.html" class="work__link"><i class='bx bx-link-external'></i></a>
-                                    <a href="https://github.com/Bandi-Rahul" class="work__link"><i class='bx bxl-github'></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work__card">
-                        <div class="work__img">
-                            <img src="assets/img/work2.jpg" alt="Project 2">
-                            <div class="work__overlay">
-                                <h3 class="work__title">Web Dashboard</h3>
-                                <p class="work__description">Analytics and monitoring platform</p>
-                                <div class="work__links">
-                                    <a href="#" class="work__link"><i class='bx bx-link-external'></i></a>
-                                    <a href="#" class="work__link"><i class='bx bxl-github'></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work__card">
-                        <div class="work__img">
-                            <img src="assets/img/work3.png" alt="Project 3">
-                            <div class="work__overlay">
-                                <h3 class="work__title">Mobile App</h3>
-                                <p class="work__description">Cross-platform solution</p>
-                                <div class="work__links">
-                                    <a href="#" class="work__link"><i class='bx bx-link-external'></i></a>
-                                    <a href="#" class="work__link"><i class='bx bxl-github'></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work__card">
-                        <div class="work__img">
-                            <img src="assets/img/work4.png" alt="Project 4">
-                            <div class="work__overlay">
-                                <h3 class="work__title">AI Assistant</h3>
-                                <p class="work__description">Machine learning chatbot</p>
-                                <div class="work__links">
-                                    <a href="#" class="work__link"><i class='bx bx-link-external'></i></a>
-                                    <a href="#" class="work__link"><i class='bx bxl-github'></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work__card">
-                        <div class="work__img">
-                            <img src="assets/img/work5.jpg" alt="Project 5">
-                            <div class="work__overlay">
-                                <h3 class="work__title">E-Commerce Site</h3>
-                                <p class="work__description">Full-stack shopping platform</p>
-                                <div class="work__links">
-                                    <a href="#" class="work__link"><i class='bx bx-link-external'></i></a>
-                                    <a href="#" class="work__link"><i class='bx bxl-github'></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work__card">
-                        <div class="work__img">
-                            <img src="assets/img/work6.jpg" alt="Project 6">
-                            <div class="work__overlay">
-                                <h3 class="work__title">Data Visualization</h3>
-                                <p class="work__description">Interactive charts and graphs</p>
-                                <div class="work__links">
-                                    <a href="#" class="work__link"><i class='bx bx-link-external'></i></a>
-                                    <a href="#" class="work__link"><i class='bx bxl-github'></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <div class="contact__info">
-                        <h3 class="contact__title">Let's work together</h3>
-                        <p class="contact__text">Have a project in mind? I'd love to hear about it. Let's connect and discuss how we can bring your ideas to life.</p>
-                        <div class="contact__details">
-                            <div class="contact__detail">
-                                <i class='bx bx-envelope contact__icon'></i>
-                                <span>rahulbandi568@gmail.com</span>
-                            </div>
-                            <div class="contact__detail">
-                                <i class='bx bx-map contact__icon'></i>
-                                <span>Available for remote work worldwide</span>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact__form" id="contact-form">
-                        <input type="text" name="from_name" placeholder="Your Name" class="contact__input" required>
-                        <input type="email" name="from_email" placeholder="Your Email" class="contact__input" required>
-                        <input type="text" name="subject" placeholder="Subject" class="contact__input" required>
-                        <textarea name="message" placeholder="Your Message" cols="0" rows="8" class="contact__input" required></textarea>
-                        <button type="submit" class="contact__button button" id="submit-btn">
-                            <span class="btn-text">Let's Connect!</span>
-                            <span class="btn-loading" style="display: none;">Sending...</span>
-                        </button>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== BACK TO TOP BUTTON =====-->
-        <a href="#home" class="back-to-top" id="back-to-top">
-            <i class='bx bx-up-arrow-alt'></i>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Get in Touch</h2>
+      <p class="contact-text">
+        Have a question or want to work together? Feel free to reach out.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:rahulbandi568@gmail.com" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>rahulbandi568@gmail.com</span>
         </a>
+        <a href="https://www.linkedin.com/in/rahul-bandi-479272272/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn (opens in new tab)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn <span class="external-indicator" aria-hidden="true">&nearr;</span></span>
+        </a>
+        <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub (opens in new tab)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span>GitHub <span class="external-indicator" aria-hidden="true">&nearr;</span></span>
+        </a>
+        <a href="https://www.instagram.com/rahul._.bandi_/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Instagram (opens in new tab)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>Instagram <span class="external-indicator" aria-hidden="true">&nearr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Rahul Bandi</p>
-            <div class="footer__social">
-                <a href="https://www.linkedin.com/in/rahul-bandi-479272272/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/rahul._.bandi_/" class="footer__icon"><i class='bx bxl-instagram' style='color:#ffffff'  ></i></a>
-                <a href="https://github.com/Bandi-Rahul" class="footer__icon"><i class='bx bxl-github' style='color:#ffffff' ></i></a>
-            </div>
-            
-            <!-- Visitor Counter -->
-            <div class="visitor__counter" style="margin: 1rem 0;">
-                <img src="https://hits.sh/bandi-rahul.github.io/portfolio.svg?style=flat-square&label=Portfolio%20Visits&color=007acc" alt="Portfolio Visits" />
-            </div>
-            
-            <p class="footer__copy">&#169; 2025 Rahul Bandi. All rights reserved.</p>
-        </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Rahul Bandi. Built with care.</p>
+    </div>
+  </footer>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+
+    // Subtle nav shadow on scroll
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.setAttribute('data-theme', 'dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+
+    // Scroll reveal animations
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Back to top
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
 </html>
