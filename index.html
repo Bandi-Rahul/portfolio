@@ -368,7 +368,7 @@
     const themeToggle = document.querySelector('.theme-toggle');
     const root = document.documentElement;
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (savedTheme === 'dark') {
       root.setAttribute('data-theme', 'dark');
     }
     themeToggle.addEventListener('click', () => {
