@@ -24,8 +24,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Apply saved theme before paint to avoid a flash of the wrong theme.
+    (function () {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 <body>
+
+  <!-- Page loader -->
+  <div id="page-loader" class="page-loader" role="status" aria-label="Loading">
+    <div class="loader-spinner"></div>
+    <p class="loader-logo">RB</p>
+  </div>
 
   <a href="#hero" class="sr-only">Skip to main content</a>
 
@@ -148,13 +162,14 @@
             <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Monitor icon"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             <h3>CI Dashboard Automation Tool</h3>
           </div>
-          <p>Built a tool to monitor CI dashboards and extract build/test data automatically, replacing manual tracking with intelligent filtering and structured output.</p>
+          <p>A Python and Selenium scraper that logs into the CI dashboards, pulls build and test data for every product/version, and rolls it all up into a single sortable HTML report - open review-queue items, paused systems, stale events, and the latest build for each version.</p>
           <div class="project-tech">
             <span>Python</span>
             <span>Selenium</span>
+            <span>HTML</span>
           </div>
-          <p class="project-impact">Reduced manual monitoring effort and improved pipeline visibility.</p>
-          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+          <p class="project-impact">Turned a manual, dozen-tab morning routine into one report I could skim in seconds.</p>
+          <a href="https://github.com/Bandi-Rahul/ci-dashboard-report" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
         </article>
 
         <article class="project-card">
@@ -162,13 +177,14 @@
             <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Code icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <h3>Automated CI Event Management</h3>
           </div>
-          <p>Developed a system to detect stale CI events and automatically trigger corrective actions, keeping pipelines active with controlled execution to prevent overload.</p>
+          <p>A script that watches CI test events and flags the ones that have gone stale - it compares each product's last run against the newest build and catches anything that has fallen too far behind. From there it can kick off fresh runs so pipelines don't quietly sit idle.</p>
           <div class="project-tech">
             <span>Python</span>
-            <span>Selenium</span>
+            <span>CI/CD</span>
+            <span>YAML</span>
           </div>
-          <p class="project-impact">Reduced pipeline delays and minimized manual intervention.</p>
-          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+          <p class="project-impact">Caught stalled pipelines early instead of finding out days later.</p>
+          <a href="https://github.com/Bandi-Rahul/stale-event-detector" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
         </article>
 
         <article class="project-card">
@@ -176,14 +192,30 @@
             <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Document icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             <h3>Build Failure Analysis &amp; Debugging</h3>
           </div>
-          <p>Analyzed and resolved build failures across environments - diagnosing dependency issues, timeouts, and misconfigurations through deep log analysis.</p>
+          <p>Automated triage for failed CI builds. It pulls the build logs, picks out the actual root-cause error, and decides whether it's a code break or an infra/environment issue by matching against a known-issues list. When it's a code break, it traces back to the change that most likely caused it.</p>
           <div class="project-tech">
+            <span>Python</span>
             <span>Log Analysis</span>
             <span>CI/CD</span>
-            <span>Python</span>
           </div>
-          <p class="project-impact">Faster failure resolution and improved release pipeline stability.</p>
-          <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+          <p class="project-impact">Cut down the back-and-forth of figuring out who broke the build, and why.</p>
+          <a href="https://github.com/Bandi-Rahul/build-failure-triage" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Hand icon"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+            <h3>Real-Time Hand Gesture Recognition</h3>
+          </div>
+          <p>A computer-vision project that reads hand gestures from a webcam in real time. I built the whole pipeline - capturing my own dataset of frames, extracting 21 hand landmarks per frame with MediaPipe, and training a Random Forest classifier to map each gesture to a phrase. OpenCV draws the prediction back onto the live video feed.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>MediaPipe</span>
+            <span>scikit-learn</span>
+          </div>
+          <p class="project-impact">Recognizes a set of custom gestures live from the camera - my first proper step into hands-on ML.</p>
+          <a href="https://github.com/Bandi-Rahul/gesture-recognition" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
         </article>
 
         <article class="project-card">
@@ -342,6 +374,12 @@
   </button>
 
   <script>
+    // Hide the page loader once everything has finished loading.
+    const pageLoader = document.getElementById('page-loader');
+    window.addEventListener('load', () => pageLoader.classList.add('loaded'));
+    // Safety net so the loader never gets stuck on slow connections.
+    setTimeout(() => pageLoader && pageLoader.classList.add('loaded'), 2500);
+
     // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
