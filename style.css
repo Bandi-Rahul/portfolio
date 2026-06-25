@@ -463,6 +463,13 @@ ul {
   margin-bottom: 0.75rem;
 }
 
+.project-note {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
