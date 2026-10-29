@@ -34,8 +34,24 @@ Then open <http://localhost:4173>. Any static file server works.
 
 The site is served by GitHub Pages from the `main` branch root, with the custom domain in `CNAME`. Merging to `main` publishes it.
 
-## Checks before merging
+## Checks
 
-- Lighthouse (mobile and desktop) at 90+ in every category.
-- Test the mobile menu, the theme toggle and keyboard navigation.
-- Confirm there is no horizontal scroll at 360px wide.
+GitHub Actions runs two jobs on every push to `main` and every pull request (`.github/workflows/checks.yml`):
+
+- **Validate HTML** with `html-validate` (config in `.htmlvalidate.json`).
+- **Lighthouse budget** with `@lhci/cli` (thresholds in `lighthouserc.json`: performance and best practices 90+, accessibility and SEO 95+, layout shift under 0.1).
+
+Run the same checks locally:
+
+```sh
+npx html-validate index.html 404.html
+npx @lhci/cli autorun
+```
+
+Also worth a look before merging: the mobile menu, the theme toggle, keyboard navigation, and no horizontal scroll at 360px wide.
+
+## Notes
+
+- A `Content-Security-Policy` meta tag restricts the page to its own files, so there are no inline scripts or styles. Keep it that way, or update the policy in `index.html` and `404.html`.
+- With JavaScript off, the nav shows as a normal row of links and the theme button is hidden.
+- `404.html` is served by GitHub Pages for unknown URLs.

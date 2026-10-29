@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rahul Bandi - LLM agents for CI, build &amp; release engineering</title>
   <meta name="description" content="Rahul Bandi, Staff Software Technician at NI (Emerson). Builds LLM agents and automation that explain why CI builds fail. Bengaluru, India.">
+  <meta name="author" content="Rahul Bandi">
   <link rel="canonical" href="https://rahulbandi.com/">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f4f0e8">
@@ -24,27 +27,25 @@
   <meta name="twitter:image" content="https://rahulbandi.com/assets/og.png">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="assets/fonts/newsreader-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/jetbrains-mono-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 
-  <script>
-    // Resolve the theme before first paint so there is no flash.
-    (function () {
-      var saved = null;
-      try { saved = localStorage.getItem('theme'); } catch (e) {}
-      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-    })();
-  </script>
+  <script src="assets/theme-init.js"></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rahulbandi.com/#rahul",
     "name": "Rahul Bandi",
     "url": "https://rahulbandi.com/",
+    "image": "https://rahulbandi.com/assets/rahul.webp",
     "jobTitle": "Staff Software Technician",
+    "description": "Builds LLM agents and automation that explain why CI builds fail.",
+    "knowsAbout": ["Build and release engineering", "CI/CD", "LLM agents", "Azure DevOps", "Python"],
     "worksFor": { "@type": "Organization", "name": "National Instruments (Emerson)" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "BITS Pilani" },
     "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
@@ -110,7 +111,7 @@
         </aside>
       </div>
 
-      <dl class="metrics" aria-label="Results at a glance">
+      <dl class="metrics">
         <div><dt>Failed builds triaged</dt><dd>1,350+</dd></div>
         <div><dt>Resolved with no LLM call</dt><dd>~65%</dd></div>
         <div><dt>Eval cases passing</dt><dd>26<span>/30</span></dd></div>
@@ -127,7 +128,12 @@
           <article class="case" aria-labelledby="case-bfa">
             <header class="case__head">
               <h3 id="case-bfa">Build Failure Analyzer</h3>
-              <p class="case__meta">Lead &middot; 2024 &ndash; now &middot; used across NI</p>
+              <dl class="snapshot">
+                <div><dt>Role</dt><dd>Built it, now lead</dd></div>
+                <div><dt>Since</dt><dd>2024</dd></div>
+                <div><dt>Status</dt><dd>In production</dd></div>
+                <div><dt>Used by</dt><dd>Teams across NI</dd></div>
+              </dl>
             </header>
 
             <p class="case__lede">
@@ -137,6 +143,15 @@
             </p>
 
             <h4 class="mono-label">How it works</h4>
+            <figure class="split">
+              <div class="split__bar" role="img" aria-label="Of every 100 failed builds, about 65 are resolved by deterministic checks and about 35 go on to the agents.">
+                <span class="split__a"></span><span class="split__b"></span>
+              </div>
+              <figcaption>
+                <span><i class="swatch swatch--a" aria-hidden="true"></i>about 65 in 100 settled by fixed checks, no model call</span>
+                <span><i class="swatch swatch--b" aria-hidden="true"></i>about 35 go on to the agents</span>
+              </figcaption>
+            </figure>
             <ol class="flow">
               <li>A failed build lands in the review queue.</li>
               <li>
@@ -162,13 +177,29 @@
               <li>Scores 26 of 30 on a labeled eval set, which I use to check every change to the prompts and rules.</li>
               <li>Won an R&amp;D Excellence Award in Emerson&rsquo;s 2026 R&amp;D Global Awards.</li>
             </ul>
+            <h4 class="mono-label">Where it falls short</h4>
+            <p>
+              It still misses roughly 4 in 30 of my eval cases, and a model can be wrong with total
+              confidence. That&rsquo;s why a triager&rsquo;s sign-off is a hard gate before any bug is
+              filed, not an optional step.
+            </p>
+            <p class="case__links">
+              The code is internal to NI. A small public version shows the first step: finding the real
+              error in a build log and labelling it infrastructure or code.
+              <a href="https://github.com/Bandi-Rahul/build-failure-triage" target="_blank" rel="noopener noreferrer">build-failure-triage on GitHub<span class="sr-only"> (opens in new tab)</span></a>
+            </p>
             <p class="stack"><span class="mono-label">Stack</span> Python &middot; Azure DevOps REST API &middot; GitHub Copilot SDK &middot; SQLite &middot; pytest &middot; Poetry</p>
           </article>
 
           <article class="case" aria-labelledby="case-review">
             <header class="case__head">
               <h3 id="case-review">Infrastructure Failure Review Agent</h3>
-              <p class="case__meta">Built it &middot; 2026 &middot; in review</p>
+              <dl class="snapshot">
+                <div><dt>Role</dt><dd>Built it</dd></div>
+                <div><dt>Since</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd>In review</dd></div>
+                <div><dt>Ships as</dt><dd>Python package + agent skill</dd></div>
+              </dl>
             </header>
             <p class="case__lede">
               An AI reviewer reads the build-failure report and writes up the infrastructure problems.
@@ -187,7 +218,12 @@
           <article class="case" aria-labelledby="case-feeds">
             <header class="case__head">
               <h3 id="case-feeds">Linux feed publishing pipeline</h3>
-              <p class="case__meta">Owner &middot; 2024 &ndash; now</p>
+              <dl class="snapshot">
+                <div><dt>Role</dt><dd>Owner</dd></div>
+                <div><dt>Since</dt><dd>2024</dd></div>
+                <div><dt>Status</dt><dd>In production</dd></div>
+                <div><dt>Used by</dt><dd>NI Bengaluru and Penang</dd></div>
+              </dl>
             </header>
             <p class="case__lede">
               Publishing a Linux package feed used to be a long manual checklist. I turned it into an
@@ -278,6 +314,12 @@
               Now I&rsquo;m studying AI &amp; ML at BITS Pilani while working full-time, and the
               Build Failure Analyzer is where the two meet.
             </p>
+            <h3 class="mono-label principles-title">How I like to build</h3>
+            <ol class="principles">
+              <li><strong>Run the cheap checks first.</strong> About 65% of failures are settled before any model is called.</li>
+              <li><strong>Measure before changing anything.</strong> A 30-case eval set tells me whether a prompt change helped.</li>
+              <li><strong>Keep a person in the loop.</strong> A triager confirms every call before a bug is filed.</li>
+            </ol>
             <dl class="facts">
               <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
               <div><dt>Studying</dt><dd>B.Tech, AI &amp; ML, BITS Pilani (work-integrated, since Jul 2025)</dd></div>
@@ -363,8 +405,8 @@
           </p>
           <p><a class="contact__mail" href="mailto:rahulbandi568@gmail.com">rahulbandi568@gmail.com</a></p>
           <ul class="contact__links">
-            <li><a href="https://www.linkedin.com/in/rahul-bandi-479272272/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></li>
-            <li><a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+            <li><a href="https://www.linkedin.com/in/rahul-bandi-479272272/" target="_blank" rel="me noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></li>
+            <li><a href="https://github.com/Bandi-Rahul" target="_blank" rel="me noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
             <li><a href="Rahul_Bandi_Resume.pdf">Resume (PDF)</a></li>
           </ul>
         </div>
@@ -374,7 +416,7 @@
 
   <footer class="site-footer">
     <div class="wrap site-footer__inner">
-      <p>&copy; 2026 Rahul Bandi</p>
+      <p>&copy; 2026 Rahul Bandi &middot; Updated October 2026</p>
       <p><a href="https://www.instagram.com/rahul._.bandi_/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in new tab)</span></a></p>
     </div>
   </footer>

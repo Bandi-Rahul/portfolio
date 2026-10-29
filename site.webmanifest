@@ -1,0 +1,13 @@
+{
+  "name": "Rahul Bandi",
+  "short_name": "Rahul Bandi",
+  "description": "Staff Software Technician at NI (Emerson). LLM agents for CI, build and release engineering.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e8",
+  "theme_color": "#a8431c",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
