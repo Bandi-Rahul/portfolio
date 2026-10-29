@@ -1,444 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rahul Bandi - Software Technician</title>
-  <meta name="description" content="Portfolio of Rahul Bandi - Software Technician specializing in Build & Release, CI/CD, and Automation.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rahul Bandi - LLM agents for CI, build &amp; release engineering</title>
+  <meta name="description" content="Rahul Bandi, Staff Software Technician at NI (Emerson). Builds LLM agents and automation that explain why CI builds fail. Bengaluru, India.">
+  <link rel="canonical" href="https://rahulbandi.com/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f0e8">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Rahul Bandi - Software Technician">
-  <meta property="og:description" content="Build & Release Engineer specializing in CI/CD, Automation, and Reliability. Currently at National Instruments (Emerson).">
-  <meta property="og:image" content="img/og-banner.svg">
-  <meta property="og:url" content="">
-
-  <!-- Twitter / X -->
+  <meta property="og:site_name" content="Rahul Bandi">
+  <meta property="og:title" content="Rahul Bandi - LLM agents for CI, build &amp; release engineering">
+  <meta property="og:description" content="Staff Software Technician at NI (Emerson). I build the tooling that explains why builds break.">
+  <meta property="og:url" content="https://rahulbandi.com/">
+  <meta property="og:image" content="https://rahulbandi.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rahul Bandi - I build the tooling that explains why builds break.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rahul Bandi - Software Technician">
-  <meta name="twitter:description" content="Build & Release Engineer specializing in CI/CD, Automation, and Reliability.">
-  <meta name="twitter:image" content="img/og-banner.svg">
+  <meta name="twitter:title" content="Rahul Bandi - LLM agents for CI, build &amp; release engineering">
+  <meta name="twitter:description" content="Staff Software Technician at NI (Emerson). I build the tooling that explains why builds break.">
+  <meta name="twitter:image" content="https://rahulbandi.com/assets/og.png">
 
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/newsreader-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <script>
-    // Apply saved theme before paint to avoid a flash of the wrong theme.
+    // Resolve the theme before first paint so there is no flash.
     (function () {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
     })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rahul Bandi",
+    "url": "https://rahulbandi.com/",
+    "jobTitle": "Staff Software Technician",
+    "worksFor": { "@type": "Organization", "name": "National Instruments (Emerson)" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "BITS Pilani" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+    "sameAs": [
+      "https://www.linkedin.com/in/rahul-bandi-479272272/",
+      "https://github.com/Bandi-Rahul"
+    ]
+  }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Page loader -->
-  <div id="page-loader" class="page-loader" role="status" aria-label="Loading">
-    <div class="loader-spinner"></div>
-    <p class="loader-logo">RB</p>
-  </div>
-
-  <a href="#hero" class="sr-only">Skip to main content</a>
-
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner container">
-      <a href="#" class="nav-logo">RB</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header id="hero" class="hero">
-    <div class="container hero-grid fade-in">
-      <div class="hero-text">
-        <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-name">Rahul Bandi</h1>
-        <p class="hero-title">Software Technician &middot; Build &amp; Release &middot; Automation</p>
-        <p class="hero-tagline">I build reliable systems and automate complex workflows.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Contact</a>
-          <a href="resume.html" download="Rahul_Bandi_Resume.html" class="btn btn-outline">Download Resume</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="img/Rahul_Bandi_rm_bg.png" alt="Rahul Bandi" />
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="#top" aria-label="Rahul Bandi, back to top">rahul bandi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+        </button>
       </div>
     </div>
-    
   </header>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in">About</h2>
-      <div class="about-content">
-        <p>
-          I'm a curious engineer and lifelong tinkerer. I enjoy working on problems at the intersection of systems, automation, and reliability. In my current role at National Instruments (Emerson), I focus on making CI pipelines smoother and reducing friction for engineering teams.
-        </p>
-        <p>
-          Whether it's debugging a tricky build failure or automating repetitive workflows, I like building solutions that save time and scale well. My roots are in hands-on engineering - from IoT projects to CanSat competitions - and I'm currently expanding into AI/ML to build smarter systems.
-        </p>
-        <div class="about-details">
-          <div class="about-detail">
-            <span class="about-label">Location</span>
-            <span>Bengaluru, India</span>
-          </div>
-          <div class="about-detail">
-            <span class="about-label">Education</span>
-            <span>B.Tech AI &amp; ML - BITS Pilani (WILP)</span>
-          </div>
-          <div class="about-detail">
-            <span class="about-label">Foundation</span>
-            <span>NTTF - Grade 9.07</span>
-          </div>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow">Staff Software Technician &middot; Build, Test &amp; Release &middot; Bengaluru</p>
+      <h1 id="hero-title">I build the tooling that explains <em>why builds break.</em></h1>
+      <div class="hero__grid">
+        <div>
+          <p class="lede">
+            I work on the Build, Test &amp; Release team at NI (Emerson), where I lead an LLM-agent
+            system that reads failed builds so engineers don&rsquo;t have to. I&rsquo;m also studying
+            AI &amp; ML at BITS Pilani, and I&rsquo;m as interested in applied ML as I am in the
+            build and release work that got me here.
+          </p>
+          <p class="hero__actions">
+            <a class="btn btn--solid" href="#work">Read the case studies</a>
+            <a class="btn" href="Rahul_Bandi_Resume.pdf">Resume (PDF)</a>
+            <a class="btn" href="mailto:rahulbandi568@gmail.com">Email me</a>
+          </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title fade-in">Skills</h2>
-      <div class="skills-grid fade-in">
-        <div class="skill-category">
-          <h3>Programming</h3>
+        <aside class="now" aria-label="What I'm doing now">
+          <h2 class="mono-label">Now</h2>
           <ul>
-            <li>Python (Automation, Scripting)</li>
-            <li>Bash / Shell Scripting</li>
+            <li>Leading the Build Failure Analyzer at NI</li>
+            <li>Part-time B.Tech in AI &amp; ML, BITS Pilani</li>
+            <li>Reading: maths for machine learning, graph theory, system design</li>
+          </ul>
+        </aside>
+      </div>
+
+      <dl class="metrics" aria-label="Results at a glance">
+        <div><dt>Failed builds triaged</dt><dd>1,350+</dd></div>
+        <div><dt>Resolved with no LLM call</dt><dd>~65%</dd></div>
+        <div><dt>Eval cases passing</dt><dd>26<span>/30</span></dd></div>
+        <div><dt>Saved per failure</dt><dd>10&ndash;15<span> min</span></dd></div>
+        <div><dt>Linux feeds published</dt><dd>200+</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap section__grid">
+        <h2 class="section__label" id="work-title"><span>01</span> Selected work</h2>
+        <div class="section__body">
+
+          <article class="case" aria-labelledby="case-bfa">
+            <header class="case__head">
+              <h3 id="case-bfa">Build Failure Analyzer</h3>
+              <p class="case__meta">Lead &middot; 2024 &ndash; now &middot; used across NI</p>
+            </header>
+
+            <p class="case__lede">
+              When a CI build fails, someone has to read the logs, decide whether the cause is the
+              infrastructure or a code change, and work out which pull request broke it. That happens
+              dozens of times a week. I built a system that does the first pass.
+            </p>
+
+            <h4 class="mono-label">How it works</h4>
+            <ol class="flow">
+              <li>A failed build lands in the review queue.</li>
+              <li>
+                <strong>Deterministic checks run first:</strong> known infrastructure patterns,
+                duplicate detection, failure clustering and dependency tracing.
+                <span class="tag">about 65% of failures end here</span>
+              </li>
+              <li>What&rsquo;s left goes to a root-cause agent. It reads the logs and PR history through tools and names the pull request that most likely caused the break.</li>
+              <li>A second agent, running on a different model, checks that call before anything is posted.</li>
+              <li>The result is commented on the work item. A triager confirms it, and only then does the system file or link a bug.</li>
+            </ol>
+            <p class="case__note">
+              Models are slow, cost money and are sometimes confidently wrong. So the cheap checks go
+              first, a second model reviews the first, and a person signs off before anything is filed.
+              Different jobs use different models: Claude Sonnet for root cause, GPT as the validator,
+              Claude Haiku for clustering.
+            </p>
+
+            <h4 class="mono-label">Results</h4>
+            <ul class="results">
+              <li>1,350+ failed builds analyzed across 600+ work items.</li>
+              <li>Saves roughly 10&ndash;15 minutes of manual triage per failure.</li>
+              <li>Scores 26 of 30 on a labeled eval set, which I use to check every change to the prompts and rules.</li>
+              <li>Won an R&amp;D Excellence Award in Emerson&rsquo;s 2026 R&amp;D Global Awards.</li>
+            </ul>
+            <p class="stack"><span class="mono-label">Stack</span> Python &middot; Azure DevOps REST API &middot; GitHub Copilot SDK &middot; SQLite &middot; pytest &middot; Poetry</p>
+          </article>
+
+          <article class="case" aria-labelledby="case-review">
+            <header class="case__head">
+              <h3 id="case-review">Infrastructure Failure Review Agent</h3>
+              <p class="case__meta">Built it &middot; 2026 &middot; in review</p>
+            </header>
+            <p class="case__lede">
+              An AI reviewer reads the build-failure report and writes up the infrastructure problems.
+              The trouble with leaving that to a model is that two runs on the same report can disagree.
+              I made it predictable.
+            </p>
+            <ul class="results">
+              <li>The reviewer must report every infrastructure cause that hits five or more distinct builds. That rule lives in code, not in the prompt.</li>
+              <li>It can still add rarer failures it thinks are worth a look, so judgment stays where it helps.</li>
+              <li>Each finding traces back to the builds behind it, so a reviewer can audit it.</li>
+              <li>Ships as a tested Python package with an agent skill and its own Azure DevOps pipeline.</li>
+            </ul>
+            <p class="stack"><span class="mono-label">Stack</span> Python &middot; LLM agent skill &middot; Azure DevOps Pipelines &middot; pytest</p>
+          </article>
+
+          <article class="case" aria-labelledby="case-feeds">
+            <header class="case__head">
+              <h3 id="case-feeds">Linux feed publishing pipeline</h3>
+              <p class="case__meta">Owner &middot; 2024 &ndash; now</p>
+            </header>
+            <p class="case__lede">
+              Publishing a Linux package feed used to be a long manual checklist. I turned it into an
+              Azure DevOps pipeline that handles the whole run, including the CDN cache purge and
+              SHA256 checksum checks.
+            </p>
+            <ul class="results">
+              <li>Published 200+ feeds through it.</li>
+              <li>Saves 3&ndash;4 manual hours on every patch or feed release.</li>
+              <li>The <code>sync_feeds</code> pipeline is also used by NI&rsquo;s Penang site.</li>
+            </ul>
+            <p class="stack"><span class="mono-label">Stack</span> Azure DevOps Pipelines &middot; Python &middot; YAML &middot; DEB/RPM/IPK packaging</p>
+          </article>
+
+          <h3 class="index-title">Smaller things</h3>
+          <ul class="index">
+            <li>
+              <a href="https://github.com/Bandi-Rahul/ci-dashboard-report" target="_blank" rel="noopener noreferrer">
+                <span class="index__name">CI Dashboard Report</span>
+                <span class="index__desc">Scrapes CI dashboards and rolls every product and version into one sortable HTML report. It replaced a dozen-tab morning routine.</span>
+                <span class="index__tech">Python &middot; Selenium</span>
+                <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Bandi-Rahul/stale-event-detector" target="_blank" rel="noopener noreferrer">
+                <span class="index__name">Stale Event Detector</span>
+                <span class="index__desc">Flags CI test events whose last run has fallen too far behind the newest build, so pipelines don&rsquo;t sit idle unnoticed.</span>
+                <span class="index__tech">Python</span>
+                <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Bandi-Rahul/build-failure-triage" target="_blank" rel="noopener noreferrer">
+                <span class="index__name">Build Failure Triage</span>
+                <span class="index__desc">A small standalone take on the analyzer: finds the real error in a build log and labels it infrastructure or code.</span>
+                <span class="index__tech">Python</span>
+                <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Bandi-Rahul/gesture-recognition" target="_blank" rel="noopener noreferrer">
+                <span class="index__name">Hand gesture recognition</span>
+                <span class="index__desc">Captured my own dataset, pulled 21 hand landmarks per frame with MediaPipe, and trained a Random Forest to read gestures live from a webcam. My first hands-on ML project.</span>
+                <span class="index__tech">Python &middot; OpenCV &middot; scikit-learn</span>
+                <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Bandi-Rahul/cansat" target="_blank" rel="noopener noreferrer">
+                <span class="index__name">CanSat</span>
+                <span class="index__desc">A can-sized satellite on an ESP32 that streams GPS and gas-sensor data over LoRa. Built for the IEEE Brixia European and DSU CanSat competitions.</span>
+                <span class="index__tech">C++ &middot; ESP32 &middot; LoRa</span>
+                <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Bandi-Rahul/gitlift" target="_blank" rel="noopener noreferrer">
+                <span class="index__name">GitLift</span>
+                <span class="index__desc">A Chrome extension that pushes my accepted solutions on LeetCode, GeeksforGeeks and HackerRank to GitHub automatically.</span>
+                <span class="index__tech">JavaScript</span>
+                <span class="sr-only">(opens in new tab)</span>
+              </a>
+            </li>
           </ul>
         </div>
-        <div class="skill-category">
-          <h3>Tools &amp; Technologies</h3>
-          <ul>
-            <li>Selenium</li>
-            <li>Azure DevOps</li>
-            <li>Git &amp; Version Control</li>
-            <li>CI/CD Systems</li>
-            <li>Build Systems (Make, Yocto)</li>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap section__grid">
+        <h2 class="section__label" id="about-title"><span>02</span> About</h2>
+        <div class="section__body about">
+          <img class="about__photo" src="assets/rahul.webp" width="413" height="531" alt="Portrait of Rahul Bandi" loading="lazy" decoding="async">
+          <div class="about__text">
+            <p>
+              I started in mechatronics. I did my diploma at NTTF, and along the way competed in the
+              IEEE Brixia European CanSat and DSU CanSat competitions with a small satellite that sent
+              sensor and GPS data over radio.
+            </p>
+            <p>
+              In July 2024 I joined NI&rsquo;s Build, Test &amp; Release team, where the job is keeping
+              the CI that ships hardware drivers healthy. I like the debugging: reading a failure,
+              working out what actually broke, and then making sure nobody has to do that by hand a
+              second time. I became a Staff Software Technician in October 2026.
+            </p>
+            <p>
+              Now I&rsquo;m studying AI &amp; ML at BITS Pilani while working full-time, and the
+              Build Failure Analyzer is where the two meet.
+            </p>
+            <dl class="facts">
+              <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
+              <div><dt>Studying</dt><dd>B.Tech, AI &amp; ML, BITS Pilani (work-integrated, since Jul 2025)</dd></div>
+              <div><dt>Diploma</dt><dd>Mechatronics Engineering, NTTF, 2021 &ndash; 2024 (grade 9.07/10)</dd></div>
+              <div><dt>Learning</dt><dd>Mathematics for ML, discrete maths and graph theory, advanced Python, system design</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="wrap section__grid">
+        <h2 class="section__label" id="exp-title"><span>03</span> Experience</h2>
+        <div class="section__body">
+          <p class="employer">National Instruments (Emerson) <span>Bengaluru, India</span></p>
+
+          <article class="role">
+            <p class="role__dates">Oct 2026 &ndash; now</p>
+            <div>
+              <h3>Staff Software Technician, Build, Test &amp; Release</h3>
+              <ul>
+                <li>Lead the Build Failure Analyzer, the multi-agent system NI uses to triage failed builds.</li>
+                <li>Own build and release for 65+ drivers within a 27-person team.</li>
+                <li>Automate Linux feed publishing, saving 3&ndash;4 manual hours per release.</li>
+                <li>Mentor newer teammates on investigating CI failures.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <p class="role__dates">Jul 2024 &ndash; Sep 2026</p>
+            <div>
+              <h3>Software Technician, Build, Test &amp; Release</h3>
+              <ul>
+                <li>Built the first version of the Build Failure Analyzer.</li>
+                <li>Wrote Python and Selenium tools that replaced manual dashboard checks and flagged stalled CI events, saving about 350 engineer-hours per release cycle.</li>
+                <li>Published 200+ Linux package feeds through Azure DevOps.</li>
+                <li>Tracked down CI failures from a flaky FlashCache unit test to an SBOM artifact name collision and a build-tool EOF bug.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recognition" aria-labelledby="rec-title">
+      <div class="wrap section__grid">
+        <h2 class="section__label" id="rec-title"><span>04</span> Recognition</h2>
+        <div class="section__body">
+          <ul class="ledger">
+            <li>
+              <span class="ledger__date">Sep 2026</span>
+              <span class="ledger__name">R&amp;D Excellence Award<span>Emerson R&amp;D Global Awards</span></span>
+            </li>
+            <li>
+              <span class="ledger__date">Aug 2023</span>
+              <span class="ledger__name">Professional Certificate Program in Blockchain<span>IIT Kanpur</span></span>
+              <a class="ledger__link" href="assets/certificates/iit-kanpur-blockchain.pdf" target="_blank" rel="noopener noreferrer">Certificate <span class="sr-only">for IIT Kanpur blockchain program (opens in new tab)</span></a>
+            </li>
+            <li>
+              <span class="ledger__date">CanSat</span>
+              <span class="ledger__name">IEEE Brixia European CanSat Competition<span>Participant</span></span>
+              <a class="ledger__link" href="assets/certificates/ieee-brixia-cansat.pdf" target="_blank" rel="noopener noreferrer">Certificate <span class="sr-only">for IEEE Brixia CanSat (opens in new tab)</span></a>
+            </li>
+            <li>
+              <span class="ledger__date">CanSat</span>
+              <span class="ledger__name">DSU CanSat Competition<span>Participant</span></span>
+              <a class="ledger__link" href="assets/certificates/dsu-cansat.pdf" target="_blank" rel="noopener noreferrer">Certificate <span class="sr-only">for DSU CanSat (opens in new tab)</span></a>
+            </li>
           </ul>
         </div>
-        <div class="skill-category">
-          <h3>Core Areas</h3>
-          <ul>
-            <li>Build &amp; Release Engineering</li>
-            <li>CI Failure Analysis &amp; Debugging</li>
-            <li>Automation Development</li>
-            <li>Log Analysis &amp; Root Cause Investigation</li>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap section__grid">
+        <h2 class="section__label" id="contact-title"><span>05</span> Contact</h2>
+        <div class="section__body">
+          <p class="contact__lead">
+            If you&rsquo;re hiring for ML engineering, build and release or DevOps, or you just want to
+            talk about CI, write to me.
+          </p>
+          <p><a class="contact__mail" href="mailto:rahulbandi568@gmail.com">rahulbandi568@gmail.com</a></p>
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/rahul-bandi-479272272/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></li>
+            <li><a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+            <li><a href="Rahul_Bandi_Resume.pdf">Resume (PDF)</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in">Projects</h2>
-      <div class="projects-grid fade-in">
-
-        <article class="project-card">
-          <div class="project-header">
-            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Monitor icon"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            <h3>CI Dashboard Automation Tool</h3>
-          </div>
-          <p>A Python and Selenium scraper that logs into the CI dashboards, pulls build and test data for every product/version, and rolls it all up into a single sortable HTML report - open review-queue items, paused systems, stale events, and the latest build for each version.</p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>Selenium</span>
-            <span>HTML</span>
-          </div>
-          <p class="project-impact">Turned a manual, dozen-tab morning routine into one report I could skim in seconds.</p>
-          <p class="project-note">Public repo is a runnable, generic demo on sample data.</p>
-          <a href="https://github.com/Bandi-Rahul/ci-dashboard-report" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Code icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <h3>Automated CI Event Management</h3>
-          </div>
-          <p>A script that watches CI test events and flags the ones that have gone stale - it compares each product's last run against the newest build and catches anything that has fallen too far behind. From there it can kick off fresh runs so pipelines don't quietly sit idle.</p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>CI/CD</span>
-            <span>YAML</span>
-          </div>
-          <p class="project-impact">Caught stalled pipelines early instead of finding out days later.</p>
-          <p class="project-note">Public repo is a runnable, generic demo on sample data.</p>
-          <a href="https://github.com/Bandi-Rahul/stale-event-detector" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Document icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <h3>Build Failure Analysis &amp; Debugging</h3>
-          </div>
-          <p>Automated triage for failed CI builds. It pulls the build logs, picks out the actual root-cause error, and decides whether it's a code break or an infra/environment issue by matching against a known-issues list. When it's a code break, it traces back to the change that most likely caused it.</p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>Log Analysis</span>
-            <span>CI/CD</span>
-          </div>
-          <p class="project-impact">Cut down the back-and-forth of figuring out who broke the build, and why.</p>
-          <p class="project-note">Public repo is a runnable, generic demo on sample data.</p>
-          <a href="https://github.com/Bandi-Rahul/build-failure-triage" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Hand icon"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-            <h3>Real-Time Hand Gesture Recognition</h3>
-          </div>
-          <p>A computer-vision project that reads hand gestures from a webcam in real time. I built the whole pipeline - capturing my own dataset of frames, extracting 21 hand landmarks per frame with MediaPipe, and training a Random Forest classifier to map each gesture to a phrase. OpenCV draws the prediction back onto the live video feed.</p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>OpenCV</span>
-            <span>MediaPipe</span>
-            <span>scikit-learn</span>
-          </div>
-          <p class="project-impact">Recognizes a set of custom gestures live from the camera - my first proper step into hands-on ML.</p>
-          <a href="https://github.com/Bandi-Rahul/gesture-recognition" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Globe icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <h3>IoT-Based CanSat Project</h3>
-          </div>
-          <p>Built a small-scale satellite simulation system for international engineering competitions, involving sensor integration, real-time data processing, and embedded communication.</p>
-          <div class="project-tech">
-            <span>IoT</span>
-            <span>Embedded Systems</span>
-            <span>Sensors</span>
-          </div>
-          <p class="project-impact">Competed at IEEE Brixia (European CanSat) and DSU CanSat competitions.</p>
-          <a href="https://github.com/Bandi-Rahul/cansat" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub <span aria-hidden="true">&nearr;</span><span class="sr-only">(opens in new tab)</span></a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title fade-in">Experience</h2>
-      <div class="experience-block">
-        <div class="experience-header">
-          <div>
-            <h3>Software Technician - Build, Test &amp; Release</h3>
-            <p class="experience-company">National Instruments (Emerson)</p>
-          </div>
-          <span class="experience-date">Jul 2024 - Present</span>
-        </div>
-        <ul class="experience-list">
-          <li>Manage build and release workflows for multiple drivers and software components</li>
-          <li>Investigate CI failures - flaky tests, dependency issues, and system-level problems</li>
-          <li>Develop automation tools to streamline CI monitoring and reduce manual effort</li>
-          <li>Improve release reliability through proactive failure analysis and root cause investigation</li>
-          <li>Support onboarding and knowledge sharing within the team</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications & Achievements -->
-  <section id="achievements" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in">Certifications &amp; Achievements</h2>
-      <div class="achievements-grid">
-        <div class="achievement-card">
-          <span class="achievement-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </span>
-          <div>
-            <h3>Blockchain - IIT Kanpur</h3>
-            <p>Professional Certificate Program in Blockchain from the Indian Institute of Technology, Kanpur</p>
-            <a href="img/IIT.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View IIT Kanpur Blockchain certificate (opens in new tab)">View Certificate <span aria-hidden="true">&nearr;</span></a>
-          </div>
-        </div>
-        <div class="achievement-card">
-          <span class="achievement-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          </span>
-          <div>
-            <h3>European CanSat Competition</h3>
-            <p>Participated in the IEEE Brixia European CanSat Competition</p>
-            <a href="img/IEEE.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View IEEE Brixia CanSat certificate (opens in new tab)">View Certificate <span aria-hidden="true">&nearr;</span></a>
-          </div>
-        </div>
-        <div class="achievement-card">
-          <span class="achievement-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          </span>
-          <div>
-            <h3>DSU CanSat Competition</h3>
-            <p>Participated in the DSU CanSat Competition</p>
-            <a href="img/DSU%201.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" aria-label="View DSU CanSat certificate (opens in new tab)">View Certificate <span aria-hidden="true">&nearr;</span></a>
-          </div>
-        </div>
-        <div class="achievement-card">
-          <span class="achievement-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </span>
-          <div>
-            <h3>Early Career Transition</h3>
-            <p>Transitioned into Build &amp; Release Engineering early in career, contributing to CI automation and workflow improvements</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Learning -->
-  <section id="learning" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in">Currently Learning</h2>
-      <div class="learning-grid fade-in">
-        <div class="learning-item">
-          <span class="learning-icon">📐</span>
-          <span>Mathematics for Machine Learning</span>
-        </div>
-        <div class="learning-item">
-          <span class="learning-icon">🔢</span>
-          <span>Discrete Mathematics &amp; Graph Theory</span>
-        </div>
-        <div class="learning-item">
-          <span class="learning-icon">🐍</span>
-          <span>Advanced Python Programming</span>
-        </div>
-        <div class="learning-item">
-          <span class="learning-icon">⚙️</span>
-          <span>System Design &amp; Scalable Automation</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in">Get in Touch</h2>
-      <p class="contact-text">
-        Have a question or want to work together? Feel free to reach out.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:rahulbandi568@gmail.com" class="contact-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>rahulbandi568@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/rahul-bandi-479272272/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn (opens in new tab)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          <span>LinkedIn <span class="external-indicator" aria-hidden="true">&nearr;</span></span>
-        </a>
-        <a href="https://github.com/Bandi-Rahul" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub (opens in new tab)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          <span>GitHub <span class="external-indicator" aria-hidden="true">&nearr;</span></span>
-        </a>
-        <a href="https://www.instagram.com/rahul._.bandi_/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Instagram (opens in new tab)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          <span>Instagram <span class="external-indicator" aria-hidden="true">&nearr;</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Rahul Bandi. Built with care.</p>
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>&copy; 2026 Rahul Bandi</p>
+      <p><a href="https://www.instagram.com/rahul._.bandi_/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in new tab)</span></a></p>
     </div>
   </footer>
 
-  <!-- Back to Top -->
-  <button class="back-to-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
-
-  <script>
-    // Hide the page loader once everything has finished loading.
-    const pageLoader = document.getElementById('page-loader');
-    window.addEventListener('load', () => pageLoader.classList.add('loaded'));
-    // Safety net so the loader never gets stuck on slow connections.
-    setTimeout(() => pageLoader && pageLoader.classList.add('loaded'), 2500);
-
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      toggle.classList.toggle('active');
-    });
-
-    // Close mobile nav on link click
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
-
-    // Subtle nav shadow on scroll
-    const nav = document.querySelector('.nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    });
-
-    // Dark mode toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    const root = document.documentElement;
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      root.setAttribute('data-theme', 'dark');
-    }
-    themeToggle.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      localStorage.setItem('theme', isDark ? 'light' : 'dark');
-    });
-
-    // Scroll reveal animations
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => observer.observe(el));
-
-    // Back to top
-    const backToTop = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('show', window.scrollY > 400);
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
