@@ -114,8 +114,8 @@
       <dl class="metrics">
         <div><dt>Failed builds triaged</dt><dd>1,350+</dd></div>
         <div><dt>Resolved with no LLM call</dt><dd>~65%</dd></div>
-        <div><dt>Eval cases passing</dt><dd>26<span>/30</span></dd></div>
-        <div><dt>Saved per failure</dt><dd>10&ndash;15<span> min</span></dd></div>
+        <div><dt>Eval cases passing</dt><dd>217<span>/250</span></dd></div>
+        <div><dt>Saved per failure</dt><dd>10-15<span> min</span></dd></div>
         <div><dt>Linux feeds published</dt><dd>200+</dd></div>
       </dl>
     </section>
@@ -173,13 +173,13 @@
             <h4 class="mono-label">Results</h4>
             <ul class="results">
               <li>1,350+ failed builds analyzed across 600+ work items.</li>
-              <li>Saves roughly 10&ndash;15 minutes of manual triage per failure.</li>
-              <li>Scores 26 of 30 on a labeled eval set, which I use to check every change to the prompts and rules.</li>
+              <li>Saves roughly 10-15 minutes of manual triage per failure.</li>
+              <li>Scores 217 of 250 on a labeled eval set, which I use to check every change to the prompts and rules.</li>
               <li>Won an R&amp;D Excellence Award in Emerson&rsquo;s 2026 R&amp;D Global Awards.</li>
             </ul>
             <h4 class="mono-label">Where it falls short</h4>
             <p>
-              It still misses roughly 4 in 30 of my eval cases, and a model can be wrong with total
+              It still gets 33 of my 250 eval cases wrong, and a model can be wrong with total
               confidence. That&rsquo;s why a triager&rsquo;s sign-off is a hard gate before any bug is
               filed, not an optional step.
             </p>
@@ -222,17 +222,18 @@
                 <div><dt>Role</dt><dd>Owner</dd></div>
                 <div><dt>Since</dt><dd>2024</dd></div>
                 <div><dt>Status</dt><dd>In production</dd></div>
-                <div><dt>Used by</dt><dd>NI Bengaluru and Penang</dd></div>
+                <div><dt>Used by</dt><dd>Teams across NI</dd></div>
               </dl>
             </header>
             <p class="case__lede">
               Publishing a Linux package feed used to be a long manual checklist. I turned it into an
               Azure DevOps pipeline that handles the whole run, including the CDN cache purge and
-              SHA256 checksum checks.
+              SHA256 checksum checks. It is now how NI publishes all of its Linux feeds.
             </p>
             <ul class="results">
+              <li>Used across the company to publish every Linux feed.</li>
               <li>Published 200+ feeds through it.</li>
-              <li>Saves 3&ndash;4 manual hours on every patch or feed release.</li>
+              <li>Saves 3-4 manual hours on every patch or feed release.</li>
               <li>The <code>sync_feeds</code> pipeline is also used by NI&rsquo;s Penang site.</li>
             </ul>
             <p class="stack"><span class="mono-label">Stack</span> Azure DevOps Pipelines &middot; Python &middot; YAML &middot; DEB/RPM/IPK packaging</p>
@@ -317,13 +318,13 @@
             <h3 class="mono-label principles-title">How I like to build</h3>
             <ol class="principles">
               <li><strong>Run the cheap checks first.</strong> About 65% of failures are settled before any model is called.</li>
-              <li><strong>Measure before changing anything.</strong> A 30-case eval set tells me whether a prompt change helped.</li>
+              <li><strong>Measure before changing anything.</strong> A 250-case eval set tells me whether a prompt change helped.</li>
               <li><strong>Keep a person in the loop.</strong> A triager confirms every call before a bug is filed.</li>
             </ol>
             <dl class="facts">
               <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
               <div><dt>Studying</dt><dd>B.Tech, AI &amp; ML, BITS Pilani (work-integrated, since Jul 2025)</dd></div>
-              <div><dt>Diploma</dt><dd>Computer Engineering and Information Technology, NTTF, 2021 &ndash; 2024 (grade 9.07/10)</dd></div>
+              <div><dt>Diploma</dt><dd>Computer Engineering and Information Technology, NTTF, 2021 - 2024 (grade 9.07/10)</dd></div>
               <div><dt>Learning</dt><dd>Mathematics for ML, discrete maths and graph theory, advanced Python, system design</dd></div>
             </dl>
           </div>
@@ -338,20 +339,20 @@
           <p class="employer">National Instruments (Emerson) <span>Bengaluru, India</span></p>
 
           <article class="role">
-            <p class="role__dates">Oct 2026 &ndash; now</p>
+            <p class="role__dates">Oct 2026 - now</p>
             <div>
               <h3>Staff Software Technician, Build, Test &amp; Release</h3>
               <ul>
                 <li>Lead the Build Failure Analyzer, the multi-agent system NI uses to triage failed builds.</li>
                 <li>Own build and release for 65+ drivers within a 27-person team.</li>
-                <li>Automate Linux feed publishing, saving 3&ndash;4 manual hours per release.</li>
+                <li>Own the Linux feed publishing pipeline NI uses company-wide, saving 3-4 manual hours per release.</li>
                 <li>Mentor newer teammates on investigating CI failures.</li>
               </ul>
             </div>
           </article>
 
           <article class="role">
-            <p class="role__dates">Jul 2024 &ndash; Sep 2026</p>
+            <p class="role__dates">Jul 2024 - Sep 2026</p>
             <div>
               <h3>Software Technician, Build, Test &amp; Release</h3>
               <ul>
@@ -374,6 +375,7 @@
             <li>
               <span class="ledger__date">Sep 2026</span>
               <span class="ledger__name">R&amp;D Excellence Award<span>Emerson R&amp;D Global Awards</span></span>
+              <a class="ledger__link" href="assets/certificates/rd-excellence-2026.jpg" target="_blank" rel="noopener noreferrer">Certificate <span class="sr-only">for the R&amp;D Excellence Award (opens in new tab)</span></a>
             </li>
             <li>
               <span class="ledger__date">Aug 2023</span>
