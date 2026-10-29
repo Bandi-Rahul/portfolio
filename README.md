@@ -28,7 +28,7 @@ Then open <http://localhost:4173>. Any static file server works.
 - **Colours and fonts** live in the `:root` and `[data-theme="dark"]` blocks at the top of `style.css`.
 - **Numbers on the page** (builds triaged, eval score and so on) are plain text in `index.html`. Search for the number to update it.
 - **Resume**: replace `Rahul_Bandi_Resume.pdf` in place. Keep the file name, since the page links to it.
-- **Photo**: replace `assets/rahul.webp`. Use a transparent-background cut-out about 560px wide; the page sets the background colour behind it.
+- **About tile**: the "rb" block in the About section is plain CSS (`.about__mark` in `style.css`), so there is no image to maintain.
 
 ## Deploy
 
