@@ -430,7 +430,7 @@ h1 em { font-style: italic; color: var(--accent); }
 
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: var(--gap); align-items: start; }
-.about__photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; background: var(--paper-2); border: 1px solid var(--rule); }
+.about__photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--paper-2); border: 1px solid var(--rule); }
 .about__text p + p { margin-top: 1.1rem; }
 .principles-title { margin-top: 2rem; }
 .principles { counter-reset: p; margin-top: 0.75rem; }
