@@ -430,17 +430,7 @@ h1 em { font-style: italic; color: var(--accent); }
 
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: var(--gap); align-items: start; }
-.about__mark {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  aspect-ratio: 4 / 5;
-  padding: 0.9rem;
-  background: var(--accent);
-  color: var(--paper);
-}
-.about__mark span { font-size: 4.75rem; font-weight: 600; line-height: 0.85; letter-spacing: -0.04em; }
-.about__mark small { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.about__photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--paper-2); border: 1px solid var(--rule); }
 .about__text p + p { margin-top: 1.1rem; }
 .principles-title { margin-top: 2rem; }
 .principles { counter-reset: p; margin-top: 0.75rem; }
@@ -565,7 +555,7 @@ h1 em { font-style: italic; color: var(--accent); }
   .snapshot > div:nth-child(3) { padding-left: 0; border-left: 0; }
   .snapshot > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
   .about { grid-template-columns: 1fr; }
-  .about__mark { max-width: 9rem; }
+  .about__photo { max-width: 9rem; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metrics > div { padding-left: 0 !important; border-left: 0 !important; }
   .metrics > div:nth-child(even) { padding-left: 1rem !important; border-left: 1px solid var(--rule) !important; }
